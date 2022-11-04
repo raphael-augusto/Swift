@@ -24,6 +24,7 @@ class DescriptionOfSizeViewController: UIViewController {
     private lazy var descriptionOfSizeView: DescriptionOfSizeView = {
         let view = DescriptionOfSizeView()
         view.delegate = self
+        view.hiddenComponent(with: Description(rawValue: self.descriptionFormat!)!)
         
         return view
     }()
@@ -74,6 +75,8 @@ extension DescriptionOfSizeViewController: DescriptionOfSizeProtocol {
         
         switch description {
         case .Circle:
+//            descriptionOfSizeView.hiddenComponent(with: description)
+            
             guard let radius = Double(descriptionOfSizeView.radiusTextField.text ?? "0") else { return "" }
             let PI: Double = 3.14
             let operation = PI * ( radius * radius)
@@ -83,6 +86,8 @@ extension DescriptionOfSizeViewController: DescriptionOfSizeProtocol {
             return result ?? ""
             
         case .Rectangle:
+//            descriptionOfSizeView.hiddenComponent(with: description)
+            
             guard let width = Double(descriptionOfSizeView.widthTextField.text ?? "0") else { return "" }
             guard let length = Double(descriptionOfSizeView.lengthTextField.text ?? "0") else { return "" }
             
@@ -94,6 +99,8 @@ extension DescriptionOfSizeViewController: DescriptionOfSizeProtocol {
             
             
         case .Triangle:
+//            descriptionOfSizeView.hiddenComponent(with: description)
+            
             guard let width = Double(descriptionOfSizeView.widthTextField.text ?? "0") else { return "" }
             guard let length = Double(descriptionOfSizeView.lengthTextField.text ?? "0") else { return "" }
             

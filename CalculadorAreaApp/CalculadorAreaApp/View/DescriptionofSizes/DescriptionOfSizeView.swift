@@ -117,17 +117,13 @@ final class DescriptionOfSizeView: UIView {
         addTargets()
     }
     
-    
-    public func dataWidth() {
-        self.widthTextField.text ?? ""
-    }
-    
-    public func dataLength() {
-        self.lengthTextField.text ?? ""
-    }
-    
-    public func dataRadius(with radius: String) {
-        self.radiusTextField.text = radius
+    public func hiddenComponent (with data: Description) {
+        if data == .Circle {
+            lengthTextField.isHidden = true
+            widthTextField.isHidden = true
+        } else {
+            radiusTextField.isHidden = true
+        }
     }
 }
 
