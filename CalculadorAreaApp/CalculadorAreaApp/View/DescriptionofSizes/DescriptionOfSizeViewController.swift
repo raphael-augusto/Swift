@@ -24,7 +24,9 @@ class DescriptionOfSizeViewController: UIViewController {
     private lazy var descriptionOfSizeView: DescriptionOfSizeView = {
         let view = DescriptionOfSizeView()
         view.delegate = self
-        view.hiddenComponent(with: Description(rawValue: self.descriptionFormat?.rawValue ?? ""))
+        
+        guard let descriptionFormat = self.descriptionFormat else { return  view }
+        view.hiddenComponent(with: descriptionFormat)
         
         return view
     }()
