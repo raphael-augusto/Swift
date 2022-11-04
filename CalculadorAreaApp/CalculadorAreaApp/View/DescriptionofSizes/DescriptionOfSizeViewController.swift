@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum Description:String {
+    case Circle
+    case Rectangle
+    case Triangle
+}
+
 class DescriptionOfSizeViewController: UIViewController {
     
     //MARK: - Variable
@@ -52,46 +58,50 @@ class DescriptionOfSizeViewController: UIViewController {
 extension DescriptionOfSizeViewController: DescriptionOfSizeProtocol {
     func didTapCalculateSize() {
         
-        let data: String = CalculeteDescriotion()
+        guard let descriptionFormat = self.descriptionFormat else { return }
+        
+        let data: String = CalculeteDescriotion(with: Description(rawValue: descriptionFormat)!)
         
         let ResultSizeViewControllerVC = ResultSizeViewController(resuts: data)
         let navVC  = UINavigationController(rootViewController: ResultSizeViewControllerVC)
         navVC.modalPresentationStyle = .fullScreen
         self.present(navVC, animated: true, completion: nil)
+        
+        
     }
     
-    private func CalculeteDescriotion() -> String {
-        switch descriptionFormat {
-        case "Circle":
-            print("tela 2 Circle")
-            let radius = NumberFormatter().number(from: descriptionOfSizeView.radiusTextField.text!)
-            let PI: Double = 3.14
-            let operation = PI * (NSNumber(value: radius!.doubleValue * radius!.doubleValue) as! Double)
-            
-            result = "\(operation)"
-
-            
-        case "Rectangle":
-            print("tela 2 Rectangle")
-            let width = NumberFormatter().number(from: descriptionOfSizeView.widthTextField.text!)
-            let length = NumberFormatter().number(from: descriptionOfSizeView.lengthTextField.text!)
-            let operation = (NSNumber(value: width!.doubleValue * length!.doubleValue))
-            
-            result = "\(operation)"
-            
-        case "Triangle":
-            print("tela 2 Triangle")
-            let width = NumberFormatter().number(from: descriptionOfSizeView.widthTextField.text!)
-            let length = NumberFormatter().number(from: descriptionOfSizeView.lengthTextField.text!)
-            let operation = (NSNumber(value: width!.doubleValue * length!.doubleValue) as! Double) / 2
-            
-            
-            result = "\(operation)"
-            
-        default:
-            "Deu ruim"
-        }
+    private func CalculeteDescriotion(with description:  Description) -> String {
         
-        return result ?? ""
+        switch description {
+        case .Circle:
+            guard let radius = Double(descriptionOfSizeView.radiusTextField.text ?? "0") else { return "" }
+            let PI: Double = 3.14
+            let operation = PI * ( radius * radius)
+
+            result = "\(operation)"
+            
+            return result ?? ""
+            
+        case .Rectangle:
+            guard let width = Double(descriptionOfSizeView.widthTextField.text ?? "0") else { return "" }
+            guard let length = Double(descriptionOfSizeView.lengthTextField.text ?? "0") else { return "" }
+            
+            let operation = (width * length)
+            
+            result = "\(operation)"
+            
+            return result ?? ""
+            
+            
+        case .Triangle:
+            guard let width = Double(descriptionOfSizeView.widthTextField.text ?? "0") else { return "" }
+            guard let length = Double(descriptionOfSizeView.lengthTextField.text ?? "0") else { return "" }
+            
+            let operation = (width * length) / 2
+            
+            result = "\(operation)"
+            
+            return result ?? ""
+        }
     }
 }

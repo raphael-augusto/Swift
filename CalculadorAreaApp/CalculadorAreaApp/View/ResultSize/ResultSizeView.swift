@@ -24,7 +24,6 @@ final class ResultSizeView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.text = "129310293012"
         label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         
         return label
