@@ -117,7 +117,7 @@ final class DescriptionOfSizeView: UIView {
         addTargets()
     }
     
-    public func hiddenComponent (with data: Description) {
+    public func hiddenComponent (with data: Description?) {
         if data == .Circle {
             lengthTextField.isHidden = true
             widthTextField.isHidden = true

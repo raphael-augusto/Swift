@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Description:String {
+enum Description: String {
     case Circle
     case Rectangle
     case Triangle
@@ -16,7 +16,7 @@ enum Description:String {
 class DescriptionOfSizeViewController: UIViewController {
     
     //MARK: - Variable
-    var descriptionFormat: String?
+    var descriptionFormat: Description?
     var result: String?
     
     
@@ -24,7 +24,7 @@ class DescriptionOfSizeViewController: UIViewController {
     private lazy var descriptionOfSizeView: DescriptionOfSizeView = {
         let view = DescriptionOfSizeView()
         view.delegate = self
-        view.hiddenComponent(with: Description(rawValue: self.descriptionFormat!)!)
+        view.hiddenComponent(with: Description(rawValue: self.descriptionFormat?.rawValue ?? ""))
         
         return view
     }()
@@ -37,7 +37,7 @@ class DescriptionOfSizeViewController: UIViewController {
     
     init(descriptionFormat: String) {
         super.init(nibName: nil, bundle: nil)
-        self.descriptionFormat   = descriptionFormat
+        self.descriptionFormat = Description(rawValue: descriptionFormat)
     }
     
     required init?(coder: NSCoder) {
@@ -61,7 +61,7 @@ extension DescriptionOfSizeViewController: DescriptionOfSizeProtocol {
         
         guard let descriptionFormat = self.descriptionFormat else { return }
         
-        let data: String = CalculeteDescriotion(with: Description(rawValue: descriptionFormat)!)
+        let data: String = CalculeteDescriotion(with: Description(rawValue: descriptionFormat.rawValue)!)
         
         let ResultSizeViewControllerVC = ResultSizeViewController(resuts: data)
         let navVC  = UINavigationController(rootViewController: ResultSizeViewControllerVC)
@@ -75,7 +75,6 @@ extension DescriptionOfSizeViewController: DescriptionOfSizeProtocol {
         
         switch description {
         case .Circle:
-//            descriptionOfSizeView.hiddenComponent(with: description)
             
             guard let radius = Double(descriptionOfSizeView.radiusTextField.text ?? "0") else { return "" }
             let PI: Double = 3.14
@@ -86,7 +85,6 @@ extension DescriptionOfSizeViewController: DescriptionOfSizeProtocol {
             return result ?? ""
             
         case .Rectangle:
-//            descriptionOfSizeView.hiddenComponent(with: description)
             
             guard let width = Double(descriptionOfSizeView.widthTextField.text ?? "0") else { return "" }
             guard let length = Double(descriptionOfSizeView.lengthTextField.text ?? "0") else { return "" }
@@ -99,7 +97,6 @@ extension DescriptionOfSizeViewController: DescriptionOfSizeProtocol {
             
             
         case .Triangle:
-//            descriptionOfSizeView.hiddenComponent(with: description)
             
             guard let width = Double(descriptionOfSizeView.widthTextField.text ?? "0") else { return "" }
             guard let length = Double(descriptionOfSizeView.lengthTextField.text ?? "0") else { return "" }
