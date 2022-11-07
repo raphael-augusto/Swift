@@ -23,10 +23,12 @@ final class HomeView: UIView {
     }()
     
     
-    public func renameTitle(with title: String, color: UIColor) {
+    public func setupLayout(with title: String, color: UIColor, background: UIColor) {
         self.titleLabel.text = title
         self.titleLabel.textColor = color
+        self.backgroundColor = background
     }
+    
     
     //MARK: - Inits
     override init(frame: CGRect) {

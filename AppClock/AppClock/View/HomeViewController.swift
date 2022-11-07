@@ -34,20 +34,19 @@ class HomeViewController: UIViewController {
         switch hour {
         case 6..<12:
             print("Bom Dia")
-            homeView.renameTitle(with: "Bom dia",color: .systemCyan)
-            homeView.backgroundColor = .systemYellow
+            homeView.setupLayout(with: "Bom dia",color: .systemCyan,background: .systemYellow)
+            
         case 12..<18:
             print("boa tarde")
-            homeView.renameTitle(with: "boa tarde",color: .white)
-            homeView.backgroundColor = .systemCyan
+            homeView.setupLayout(with: "boa tarde",color: .white, background: .systemCyan)
+            
         case 18...23:
             print("boa noite")
-            homeView.renameTitle(with: "boa noite",color: .white)
-            homeView.backgroundColor = .black
+            homeView.setupLayout(with: "boa noite",color: .white, background: .black)
+            
         case 0..<5:
             print("Ainda está acordado?")
-            homeView.renameTitle(with: "Ainda está acordado?",color: .white)
-            homeView.backgroundColor = .black
+            homeView.setupLayout(with: "Ainda está acordado?",color: .white, background: .black)
             
         default:
             break
