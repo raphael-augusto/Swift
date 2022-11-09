@@ -29,7 +29,6 @@ class ScreenCViewController: UIViewController {
         super.viewDidLoad()
         
         titlePage()
-        setupBind()
     }
     
     
@@ -41,13 +40,7 @@ class ScreenCViewController: UIViewController {
 //MARK: - Action
 extension ScreenCViewController: ScreenCViewProtocol {
 
-    private func setupBind() {
-        viewModel.didTapScreen = { [weak self] in
-            self?.didTapScreen()
-        }
-    }
-
     func didTapScreen() {
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

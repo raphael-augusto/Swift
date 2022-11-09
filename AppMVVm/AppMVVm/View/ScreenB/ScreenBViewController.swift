@@ -11,6 +11,8 @@ class ScreenBViewController: UIViewController {
 
     private var viewModel = ScreenBViewModel()
     
+    
+    //MARK: - VIEW
     private lazy var screenBView: ScreenBView = {
         let view = ScreenBView()
         view.delegate = self
@@ -29,7 +31,12 @@ class ScreenBViewController: UIViewController {
         super.viewDidLoad()
         
         titlePage()
-        setupBind()
+    }
+    
+    
+    //MARK: - Properts
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     
@@ -40,17 +47,9 @@ class ScreenBViewController: UIViewController {
 
 //MARK: - Action
 extension ScreenBViewController: ScreenBViewProtocol {
-   
-    private func setupBind() {
-        viewModel.didTapScreen = { [weak self] in
-            self?.didTapScreen()
-        }
-    }
     
     func didTapScreen() {
         let screenC = ScreenCViewController()
-        let navVC  = UINavigationController(rootViewController: screenC)
-        navVC.modalPresentationStyle = .fullScreen
-        self.present(navVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(screenC, animated: true)
     }
 }

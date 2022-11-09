@@ -13,7 +13,7 @@ class ScreenAViewController: UIViewController {
     private var viewModel = ScreenAViewModel()
     
     
-    //MARK: - Properts
+    //MARK: - VIEW
     private lazy var screenAView: ScreenAView = {
         let view = ScreenAView()
         view.delegate = self
@@ -33,11 +33,15 @@ class ScreenAViewController: UIViewController {
         super.viewDidLoad()
         
         titlePage()
-        setupBind()
     }
     
     
-    //MARK: - Show Properts
+    //MARK: - Properts
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    
     private func titlePage() {
         screenAView.dataTitle(with: viewModel.dataTitle ?? "")
     }
@@ -46,18 +50,10 @@ class ScreenAViewController: UIViewController {
 
 //MARK: - Action
 extension ScreenAViewController: ScreenAViewProtocol {
-
-    private func setupBind() {
-        viewModel.didTapScreen = { [weak self] in
-            self?.didTapScreen()
-        }
-    }
     
     func didTapScreen() {
         let screenB = ScreenBViewController()
-        let navVC  = UINavigationController(rootViewController: screenB)
-        navVC.modalPresentationStyle = .fullScreen
-        self.present(navVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(screenB, animated: true)
     }
 }
 

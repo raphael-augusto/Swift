@@ -12,5 +12,4 @@ class ScreenAViewModel {
     
     private(set) var dataTitle: String? = "Screen A"
     
-    var didTapScreen: (() -> Void)?
 }

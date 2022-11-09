@@ -11,5 +11,4 @@ class ScreenBViewModel {
     
     private(set) var dataTitle: String? = "Screen B"
     
-    var didTapScreen: (() -> Void)?
 }

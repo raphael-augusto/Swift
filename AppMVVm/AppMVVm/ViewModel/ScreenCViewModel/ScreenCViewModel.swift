@@ -11,5 +11,4 @@ class ScreenCViewModel {
     
     private(set) var dataTitle: String? = "Screen C"
     
-    var didTapScreen: (() -> Void)?
 }
