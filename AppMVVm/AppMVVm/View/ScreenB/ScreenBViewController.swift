@@ -80,10 +80,10 @@ extension ScreenBViewController: ScreenBViewProtocol {
     
     func didTapScreen() {
         
-        if viewModel.calcAge(birthday: age ?? "") > 0 {
-            let ageUser = viewModel.calcAge(birthday: age ?? "")
-            
-            let screenC = ScreenCViewController(userName: self.userName ?? "", age: ageUser)
+        let dataUser = viewModel.calcBirthday(birthday: self.age ?? "")
+        
+        if dataUser == true {
+            let screenC = ScreenCViewController(userName: self.userName ?? "", age: self.age ?? "")
             self.navigationController?.pushViewController(screenC, animated: true)
             
         } else {

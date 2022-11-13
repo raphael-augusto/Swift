@@ -14,7 +14,7 @@ class ScreenAViewModel {
     
     
     func validateUserName(_ userName:String) -> Bool {
-        guard userName.components(separatedBy: " ").count > 1 else { return false }
+        guard userName.trimmingCharacters(in: .whitespaces).components(separatedBy: " ").count > 1 else { return false }
         
         let predicate = NSPredicate(format: "SELF MATCHES %@", "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$")
         return predicate.evaluate(with: userName)

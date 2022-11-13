@@ -10,17 +10,19 @@ import Foundation
 class ScreenBViewModel {
     
     private(set) var dataTitle: String? = "Screen B"
+
     
-    
-    public func calcAge(birthday: String) -> Int {
+    public func calcBirthday(birthday: String) -> Bool {
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "dd/MM/yyyy"
-        let birthdayDate = dateFormater.date(from: birthday)
-        let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
+        let birthdayDate = dateFormater.date(from: birthday)!
         let now = Date()
-        let calcAge = calendar.components(.year, from: birthdayDate ?? now, to: now, options: [])
-        let age = calcAge.year
-        return age!
+        
+        if birthdayDate < now {
+            return true
+        } else {
+            return false
+        }
     }
-    
+
 }

@@ -27,10 +27,10 @@ class ScreenCViewController: UIViewController {
     }
     
     
-    init(userName: String, age: Int) {
+    init(userName: String, age: String) {
         super.init(nibName: nil, bundle: nil)
         self.userName = userName
-        self.age = String(age)
+        self.age = age
     }
     
     required init?(coder: NSCoder) {
@@ -50,7 +50,9 @@ class ScreenCViewController: UIViewController {
     }
     
     private func User() {
-        self.screenCView.descriptionUser(userName: self.userName ?? "", userAge: age ?? "")
+        let userAger = viewModel.calcAge(birthday: self.age ?? "")
+        
+        self.screenCView.descriptionUser(userName: self.userName ?? "", userAge: String(userAger))
     }
 }
 
