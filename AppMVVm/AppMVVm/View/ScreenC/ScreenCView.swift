@@ -28,6 +28,69 @@ final class ScreenCView: UIView {
         return lb
     }()
     
+    private lazy var stackUserName: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.spacing = 5
+        stack.alignment = .center
+        stack.axis = .horizontal
+        stack.addArrangedSubview(userLabel)
+        stack.addArrangedSubview(userNameLabel)
+        
+        return stack
+    }()
+    
+    private lazy var userLabel: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.textColor = .black
+        lb.text = "Nome: "
+        lb.font = UIFont.systemFont(ofSize: 26, weight: .bold)
+        
+        return lb
+    }()
+    
+    lazy var userNameLabel: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.textColor = .black
+        lb.font = UIFont.systemFont(ofSize: 25, weight: .regular)
+        
+        return lb
+    }()
+    
+    
+    private lazy var stackUserAge: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.spacing = 5
+        stack.alignment = .center
+        stack.axis = .horizontal
+        stack.addArrangedSubview(ageLabel)
+        stack.addArrangedSubview(userAgeLabel)
+        
+        return stack
+    }()
+    
+    private lazy var ageLabel: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.textColor = .black
+        lb.text = "Idade: "
+        lb.font = UIFont.systemFont(ofSize: 26, weight: .bold)
+        
+        return lb
+    }()
+    
+    lazy var userAgeLabel: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.textColor = .black
+        lb.font = UIFont.systemFont(ofSize: 25, weight: .regular)
+        
+        return lb
+    }()
+    
     private lazy var goButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
@@ -61,24 +124,37 @@ final class ScreenCView: UIView {
     public func dataTitle(with title: String) {
         self.titleLabel.text = title
     }
+    
+    public func descriptionUser (userName: String, userAge: String) {
+        self.userNameLabel.text = userName
+        self.userAgeLabel.text  = userAge
+    }
 }
 
 //MARK: - Components and Constraints
 extension ScreenCView : ConfigurableView {
     func initSubviews() {
         addSubview(titleLabel)
+        addSubview(stackUserName)
+        addSubview(stackUserAge)
         addSubview(goButton)
     }
     
     func initConstraints() {
         NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             
-            goButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            goButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            goButton.widthAnchor.constraint(equalToConstant: 240),
-            goButton.heightAnchor.constraint(equalToConstant: 50),
+            stackUserName.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 80),
+            stackUserName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            
+            stackUserAge.topAnchor.constraint(equalTo: stackUserName.bottomAnchor, constant: 20),
+            stackUserAge.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            
+            goButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            goButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            goButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            goButton.heightAnchor.constraint(equalToConstant: 52),
         ])
     }
     

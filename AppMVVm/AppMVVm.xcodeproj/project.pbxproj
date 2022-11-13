@@ -24,6 +24,8 @@
 		64C0AB7E291B2FEA009934A2 /* ScreenAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0AB7D291B2FEA009934A2 /* ScreenAViewModel.swift */; };
 		64C0AB80291B3656009934A2 /* ScreenBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0AB7F291B3655009934A2 /* ScreenBViewModel.swift */; };
 		64C0AB82291B3670009934A2 /* ScreenCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0AB81291B3670009934A2 /* ScreenCViewModel.swift */; };
+		64C0AB87291DB71A009934A2 /* UiTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0AB86291DB71A009934A2 /* UiTextField+Extension.swift */; };
+		64C0AB89291DEF2B009934A2 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0AB88291DEF2B009934A2 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		64C0AB7D291B2FEA009934A2 /* ScreenAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAViewModel.swift; sourceTree = "<group>"; };
 		64C0AB7F291B3655009934A2 /* ScreenBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBViewModel.swift; sourceTree = "<group>"; };
 		64C0AB81291B3670009934A2 /* ScreenCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCViewModel.swift; sourceTree = "<group>"; };
+		64C0AB86291DB71A009934A2 /* UiTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiTextField+Extension.swift"; sourceTree = "<group>"; };
+		64C0AB88291DEF2B009934A2 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		64C0AB34291B2703009934A2 /* AppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				64C0AB83291DB4F9009934A2 /* Extensions */,
 				64C0AB6F291B293F009934A2 /* Utility */,
 				64C0AB68291B2744009934A2 /* Model */,
 				64C0AB67291B2738009934A2 /* ViewModel */,
@@ -211,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				64C0AB70291B293F009934A2 /* ConfigurableView.swift */,
+				64C0AB88291DEF2B009934A2 /* Alert.swift */,
 			);
 			name = Utility;
 			path = ../../CalculadorAreaApp/CalculadorAreaApp/Utility;
@@ -238,6 +244,14 @@
 				64C0AB81291B3670009934A2 /* ScreenCViewModel.swift */,
 			);
 			path = ScreenCViewModel;
+			sourceTree = "<group>";
+		};
+		64C0AB83291DB4F9009934A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				64C0AB86291DB71A009934A2 /* UiTextField+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +390,8 @@
 				64C0AB80291B3656009934A2 /* ScreenBViewModel.swift in Sources */,
 				64C0AB6E291B2900009934A2 /* ScreenAView.swift in Sources */,
 				64C0AB3A291B2703009934A2 /* ScreenAViewController.swift in Sources */,
+				64C0AB89291DEF2B009934A2 /* Alert.swift in Sources */,
+				64C0AB87291DB71A009934A2 /* UiTextField+Extension.swift in Sources */,
 				64C0AB36291B2703009934A2 /* AppDelegate.swift in Sources */,
 				64C0AB75291B2B97009934A2 /* ScreenBView.swift in Sources */,
 				64C0AB82291B3670009934A2 /* ScreenCViewModel.swift in Sources */,

@@ -11,13 +11,14 @@ class ScreenAViewController: UIViewController {
 
     //MARK: - variables
     private var viewModel = ScreenAViewModel()
+    private var alert: Alert?
     
     
     //MARK: - VIEW
     private lazy var screenAView: ScreenAView = {
         let view = ScreenAView()
         view.delegate = self
-        
+
         return view
     }()
     
@@ -31,6 +32,7 @@ class ScreenAViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.alert = Alert(controller: self)
         
         titlePage()
     }
@@ -38,6 +40,7 @@ class ScreenAViewController: UIViewController {
     
     //MARK: - Properts
     override func viewWillAppear(_ animated: Bool) {
+        self.screenAView.clearTextField()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
@@ -48,12 +51,22 @@ class ScreenAViewController: UIViewController {
 }
 
 
+
 //MARK: - Action
 extension ScreenAViewController: ScreenAViewProtocol {
     
     func didTapScreen() {
-        let screenB = ScreenBViewController()
-        self.navigationController?.pushViewController(screenB, animated: true)
+        let data:String = self.screenAView.userNameTF()
+        
+        if viewModel.validateUserName(data) == true {
+            print("Indo para screen B")
+            
+            let screenB = ScreenBViewController(userName: data)
+            self.navigationController?.pushViewController(screenB, animated: true)
+            
+        } else {
+            self.alert?.getAlert(title: "Atenção", message: "Tem que preencher com o nome completo")
+        }
     }
 }
 

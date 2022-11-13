@@ -10,6 +10,10 @@ import UIKit
 class ScreenBViewController: UIViewController {
 
     private var viewModel = ScreenBViewModel()
+    private var alert: Alert?
+    
+    private var userName: String?
+    private var age: String?
     
     
     //MARK: - VIEW
@@ -26,11 +30,21 @@ class ScreenBViewController: UIViewController {
         self.view = screenBView
     }
     
+    init(userName: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.userName = userName
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.alert = Alert(controller: self)
         
         titlePage()
+        dataUserName()
     }
     
     
@@ -43,13 +57,40 @@ class ScreenBViewController: UIViewController {
     private func titlePage() {
         screenBView.dataTitle(with: viewModel.dataTitle ?? "")
     }
+    
+    private func dataUserName() {
+        screenBView.dataUserName(with: userName ?? "")
+    }
 }
 
 //MARK: - Action
 extension ScreenBViewController: ScreenBViewProtocol {
+    func doneAction() {
+        if let datePicker = self.screenBView.userBirthDateDatePiker.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .short
+            self.screenBView.userBirthDateDatePiker.text = dateFormatter.string(from: datePicker.date)
+            
+            self.age = self.screenBView.userBirthDateDatePiker.text
+        }
+        
+        self.screenBView.userBirthDateDatePiker.resignFirstResponder()
+    }
+    
     
     func didTapScreen() {
-        let screenC = ScreenCViewController()
-        self.navigationController?.pushViewController(screenC, animated: true)
+        
+        if viewModel.calcAge(birthday: age ?? "") > 0 {
+            let ageUser = viewModel.calcAge(birthday: age ?? "")
+            
+            let screenC = ScreenCViewController(userName: self.userName ?? "", age: ageUser)
+            self.navigationController?.pushViewController(screenC, animated: true)
+            
+        } else {
+            self.alert?.getAlert(title: "Atenção", message: "Preencha o campo de data corretamente")
+        }
+        
+
     }
 }
+
