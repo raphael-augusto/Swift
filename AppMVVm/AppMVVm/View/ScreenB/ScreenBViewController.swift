@@ -82,15 +82,12 @@ extension ScreenBViewController: ScreenBViewProtocol {
         
         let dataUser = viewModel.calcBirthday(birthday: self.age ?? "")
         
-        if dataUser == true {
+        if dataUser {
             let screenC = ScreenCViewController(userName: self.userName ?? "", age: self.age ?? "")
             self.navigationController?.pushViewController(screenC, animated: true)
             
         } else {
             self.alert?.getAlert(title: "Atenção", message: "Preencha o campo de data corretamente")
         }
-        
-
     }
 }
-

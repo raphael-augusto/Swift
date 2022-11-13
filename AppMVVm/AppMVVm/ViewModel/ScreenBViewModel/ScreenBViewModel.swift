@@ -15,14 +15,10 @@ class ScreenBViewModel {
     public func calcBirthday(birthday: String) -> Bool {
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "dd/MM/yyyy"
-        let birthdayDate = dateFormater.date(from: birthday)!
+        let birthdayDate = dateFormater.date(from: birthday) ?? Date()+1
         let now = Date()
         
-        if birthdayDate < now {
-            return true
-        } else {
-            return false
-        }
+        return birthdayDate < now 
     }
 
 }
