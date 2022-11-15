@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64C0AB972922D719009934A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0AB962922D719009934A2 /* AppDelegate.swift */; };
+		64C0AB992922D719009934A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0AB982922D719009934A2 /* SceneDelegate.swift */; };
+		64C0AB9B2922D719009934A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0AB9A2922D719009934A2 /* HomeViewController.swift */; };
+		64C0ABA02922D71B009934A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C0AB9F2922D71B009934A2 /* Assets.xcassets */; };
+		64C0ABA32922D71B009934A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C0ABA12922D71B009934A2 /* LaunchScreen.storyboard */; };
+		64C0ABAE2922D71B009934A2 /* HoleriteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABAD2922D71B009934A2 /* HoleriteAppTests.swift */; };
+		64C0ABB82922D71B009934A2 /* HoleriteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABB72922D71B009934A2 /* HoleriteAppUITests.swift */; };
+		64C0ABBA2922D71B009934A2 /* HoleriteAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABB92922D71B009934A2 /* HoleriteAppUITestsLaunchTests.swift */; };
+		64C0ABCB2922D86B009934A2 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABCA2922D86B009934A2 /* ConfigurableView.swift */; };
+		64C0ABCF2922D8F3009934A2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABCE2922D8F3009934A2 /* HomeView.swift */; };
+		64C0ABD22922D959009934A2 /* UiTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABD12922D959009934A2 /* UiTextField+Extension.swift */; };
+		64C0ABD42922D9B7009934A2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABD32922D9B7009934A2 /* HomeViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64C0ABAA2922D71B009934A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64C0AB8B2922D719009934A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64C0AB922922D719009934A2;
+			remoteInfo = HoleriteApp;
+		};
+		64C0ABB42922D71B009934A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64C0AB8B2922D719009934A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64C0AB922922D719009934A2;
+			remoteInfo = HoleriteApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		64C0AB932922D719009934A2 /* HoleriteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoleriteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C0AB962922D719009934A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64C0AB982922D719009934A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		64C0AB9A2922D719009934A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		64C0AB9F2922D71B009934A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64C0ABA22922D71B009934A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64C0ABA42922D71B009934A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64C0ABA92922D71B009934A2 /* HoleriteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoleriteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C0ABAD2922D71B009934A2 /* HoleriteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleriteAppTests.swift; sourceTree = "<group>"; };
+		64C0ABB32922D71B009934A2 /* HoleriteAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoleriteAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C0ABB72922D71B009934A2 /* HoleriteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleriteAppUITests.swift; sourceTree = "<group>"; };
+		64C0ABB92922D71B009934A2 /* HoleriteAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleriteAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		64C0ABCA2922D86B009934A2 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
+		64C0ABCE2922D8F3009934A2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		64C0ABD12922D959009934A2 /* UiTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiTextField+Extension.swift"; sourceTree = "<group>"; };
+		64C0ABD32922D9B7009934A2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64C0AB902922D719009934A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64C0ABA62922D71B009934A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64C0ABB02922D71B009934A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64C0AB8A2922D719009934A2 = {
+			isa = PBXGroup;
+			children = (
+				64C0AB952922D719009934A2 /* HoleriteApp */,
+				64C0ABAC2922D71B009934A2 /* HoleriteAppTests */,
+				64C0ABB62922D71B009934A2 /* HoleriteAppUITests */,
+				64C0AB942922D719009934A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64C0AB942922D719009934A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64C0AB932922D719009934A2 /* HoleriteApp.app */,
+				64C0ABA92922D71B009934A2 /* HoleriteAppTests.xctest */,
+				64C0ABB32922D71B009934A2 /* HoleriteAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64C0AB952922D719009934A2 /* HoleriteApp */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABD02922D941009934A2 /* Extensions */,
+				64C0ABC92922D846009934A2 /* Utility */,
+				64C0ABC62922D7FF009934A2 /* Model */,
+				64C0ABC82922D80D009934A2 /* ViewModel */,
+				64C0ABC72922D806009934A2 /* View */,
+				64C0ABCC2922D894009934A2 /* Support */,
+				64C0ABA42922D71B009934A2 /* Info.plist */,
+			);
+			path = HoleriteApp;
+			sourceTree = "<group>";
+		};
+		64C0ABAC2922D71B009934A2 /* HoleriteAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABAD2922D71B009934A2 /* HoleriteAppTests.swift */,
+			);
+			path = HoleriteAppTests;
+			sourceTree = "<group>";
+		};
+		64C0ABB62922D71B009934A2 /* HoleriteAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABB72922D71B009934A2 /* HoleriteAppUITests.swift */,
+				64C0ABB92922D71B009934A2 /* HoleriteAppUITestsLaunchTests.swift */,
+			);
+			path = HoleriteAppUITests;
+			sourceTree = "<group>";
+		};
+		64C0ABC62922D7FF009934A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64C0ABC72922D806009934A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABCD2922D8B1009934A2 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64C0ABC82922D80D009934A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABD32922D9B7009934A2 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		64C0ABC92922D846009934A2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABCA2922D86B009934A2 /* ConfigurableView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		64C0ABCC2922D894009934A2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				64C0AB962922D719009934A2 /* AppDelegate.swift */,
+				64C0AB982922D719009934A2 /* SceneDelegate.swift */,
+				64C0AB9F2922D71B009934A2 /* Assets.xcassets */,
+				64C0ABA12922D71B009934A2 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		64C0ABCD2922D8B1009934A2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64C0AB9A2922D719009934A2 /* HomeViewController.swift */,
+				64C0ABCE2922D8F3009934A2 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		64C0ABD02922D941009934A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABD12922D959009934A2 /* UiTextField+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64C0AB922922D719009934A2 /* HoleriteApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64C0ABBD2922D71B009934A2 /* Build configuration list for PBXNativeTarget "HoleriteApp" */;
+			buildPhases = (
+				64C0AB8F2922D719009934A2 /* Sources */,
+				64C0AB902922D719009934A2 /* Frameworks */,
+				64C0AB912922D719009934A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoleriteApp;
+			productName = HoleriteApp;
+			productReference = 64C0AB932922D719009934A2 /* HoleriteApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64C0ABA82922D71B009934A2 /* HoleriteAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64C0ABC02922D71B009934A2 /* Build configuration list for PBXNativeTarget "HoleriteAppTests" */;
+			buildPhases = (
+				64C0ABA52922D71B009934A2 /* Sources */,
+				64C0ABA62922D71B009934A2 /* Frameworks */,
+				64C0ABA72922D71B009934A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64C0ABAB2922D71B009934A2 /* PBXTargetDependency */,
+			);
+			name = HoleriteAppTests;
+			productName = HoleriteAppTests;
+			productReference = 64C0ABA92922D71B009934A2 /* HoleriteAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		64C0ABB22922D71B009934A2 /* HoleriteAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64C0ABC32922D71B009934A2 /* Build configuration list for PBXNativeTarget "HoleriteAppUITests" */;
+			buildPhases = (
+				64C0ABAF2922D71B009934A2 /* Sources */,
+				64C0ABB02922D71B009934A2 /* Frameworks */,
+				64C0ABB12922D71B009934A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64C0ABB52922D71B009934A2 /* PBXTargetDependency */,
+			);
+			name = HoleriteAppUITests;
+			productName = HoleriteAppUITests;
+			productReference = 64C0ABB32922D71B009934A2 /* HoleriteAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64C0AB8B2922D719009934A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					64C0AB922922D719009934A2 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					64C0ABA82922D71B009934A2 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 64C0AB922922D719009934A2;
+					};
+					64C0ABB22922D71B009934A2 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 64C0AB922922D719009934A2;
+					};
+				};
+			};
+			buildConfigurationList = 64C0AB8E2922D719009934A2 /* Build configuration list for PBXProject "HoleriteApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64C0AB8A2922D719009934A2;
+			productRefGroup = 64C0AB942922D719009934A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64C0AB922922D719009934A2 /* HoleriteApp */,
+				64C0ABA82922D71B009934A2 /* HoleriteAppTests */,
+				64C0ABB22922D71B009934A2 /* HoleriteAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64C0AB912922D719009934A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C0ABA32922D71B009934A2 /* LaunchScreen.storyboard in Resources */,
+				64C0ABA02922D71B009934A2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64C0ABA72922D71B009934A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64C0ABB12922D71B009934A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64C0AB8F2922D719009934A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C0AB9B2922D719009934A2 /* HomeViewController.swift in Sources */,
+				64C0ABCB2922D86B009934A2 /* ConfigurableView.swift in Sources */,
+				64C0ABD42922D9B7009934A2 /* HomeViewModel.swift in Sources */,
+				64C0AB972922D719009934A2 /* AppDelegate.swift in Sources */,
+				64C0ABD22922D959009934A2 /* UiTextField+Extension.swift in Sources */,
+				64C0ABCF2922D8F3009934A2 /* HomeView.swift in Sources */,
+				64C0AB992922D719009934A2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64C0ABA52922D71B009934A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C0ABAE2922D71B009934A2 /* HoleriteAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64C0ABAF2922D71B009934A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C0ABBA2922D71B009934A2 /* HoleriteAppUITestsLaunchTests.swift in Sources */,
+				64C0ABB82922D71B009934A2 /* HoleriteAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64C0ABAB2922D71B009934A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64C0AB922922D719009934A2 /* HoleriteApp */;
+			targetProxy = 64C0ABAA2922D71B009934A2 /* PBXContainerItemProxy */;
+		};
+		64C0ABB52922D71B009934A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64C0AB922922D719009934A2 /* HoleriteApp */;
+			targetProxy = 64C0ABB42922D71B009934A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64C0ABA12922D71B009934A2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64C0ABA22922D71B009934A2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64C0ABBB2922D71B009934A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64C0ABBC2922D71B009934A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64C0ABBE2922D71B009934A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoleriteApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64C0ABBF2922D71B009934A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoleriteApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		64C0ABC12922D71B009934A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoleriteApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HoleriteApp";
+			};
+			name = Debug;
+		};
+		64C0ABC22922D71B009934A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoleriteApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HoleriteApp";
+			};
+			name = Release;
+		};
+		64C0ABC42922D71B009934A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HoleriteApp;
+			};
+			name = Debug;
+		};
+		64C0ABC52922D71B009934A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HoleriteApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64C0AB8E2922D719009934A2 /* Build configuration list for PBXProject "HoleriteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64C0ABBB2922D71B009934A2 /* Debug */,
+				64C0ABBC2922D71B009934A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64C0ABBD2922D71B009934A2 /* Build configuration list for PBXNativeTarget "HoleriteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64C0ABBE2922D71B009934A2 /* Debug */,
+				64C0ABBF2922D71B009934A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64C0ABC02922D71B009934A2 /* Build configuration list for PBXNativeTarget "HoleriteAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64C0ABC12922D71B009934A2 /* Debug */,
+				64C0ABC22922D71B009934A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64C0ABC32922D71B009934A2 /* Build configuration list for PBXNativeTarget "HoleriteAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64C0ABC42922D71B009934A2 /* Debug */,
+				64C0ABC52922D71B009934A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64C0AB8B2922D719009934A2 /* Project object */;
+}
