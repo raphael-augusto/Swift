@@ -24,6 +24,7 @@ final class ResultCalculateView: UIView {
         bt.setTitle("FECHAR", for: .normal)
         bt.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold)
         bt.setTitleColor(.black, for: .normal)
+        bt.backgroundColor = .red
         
         return bt
     }()
@@ -80,8 +81,11 @@ extension ResultCalculateView : ConfigurableView {
     
     func initConstraints() {
         NSLayoutConstraint.activate([
-            backButton.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            backButton.topAnchor.constraint(equalTo: topAnchor),
             backButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            backButton.widthAnchor.constraint(equalToConstant: 80),
+            backButton.heightAnchor.constraint(equalToConstant: 80),
+            
             
             tableView.topAnchor.constraint(equalTo: backButton.bottomAnchor,constant: 20),
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
