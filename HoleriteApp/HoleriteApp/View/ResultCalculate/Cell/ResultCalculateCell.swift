@@ -14,10 +14,6 @@ final class  ResultCalculateCell : UITableViewCell {
     static let identifier:String = "ResultCalculateCell"
     
     
-    //MARK: - ModelCell
-    var viewModel: ResultCalculateCellViewModel?
-    
-    
     //MARK: - Properts
     private lazy var container: UIStackView = {
         let container = UIStackView(frame: .zero)
@@ -105,20 +101,18 @@ extension ResultCalculateCell : ConfigurableView {
 extension ResultCalculateCell {
     
     public func setupCell(cell: Holeritedata, textColour:UIColor) {
-        self.viewModel = ResultCalculateCellViewModel(objc: cell)
-
-        if (viewModel?.value == "R$ 0,00" ) {
+        if (cell.value == "R$ 0,00" ) {
             self.valueLabel.textColor = .gray
 
-        } else if (viewModel?.objc.isDiscount == false) {
+        } else if (cell.isDiscount == false) {
             self.valueLabel.textColor = .systemGreen
             
         } else {
             self.valueLabel.textColor = .red
         }
         
-        self.descriptionLabel.text  = self.viewModel?.name
-        self.valueLabel.text        = self.viewModel?.value
-        self.percentageLabel.text   = self.viewModel?.percentage
+        self.descriptionLabel.text  = cell.name
+        self.valueLabel.text        = cell.value
+        self.percentageLabel.text   = cell.percentage
     }
 }

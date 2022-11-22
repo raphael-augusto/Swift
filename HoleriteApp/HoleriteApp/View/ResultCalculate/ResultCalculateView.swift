@@ -24,7 +24,6 @@ final class ResultCalculateView: UIView {
         bt.setTitle("FECHAR", for: .normal)
         bt.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold)
         bt.setTitleColor(.black, for: .normal)
-        bt.backgroundColor = .red
         
         return bt
     }()
