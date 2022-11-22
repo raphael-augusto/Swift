@@ -17,8 +17,16 @@
 		64C0ABBA2922D71B009934A2 /* HoleriteAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABB92922D71B009934A2 /* HoleriteAppUITestsLaunchTests.swift */; };
 		64C0ABCB2922D86B009934A2 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABCA2922D86B009934A2 /* ConfigurableView.swift */; };
 		64C0ABCF2922D8F3009934A2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABCE2922D8F3009934A2 /* HomeView.swift */; };
-		64C0ABD22922D959009934A2 /* UiTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABD12922D959009934A2 /* UiTextField+Extension.swift */; };
+		64C0ABD22922D959009934A2 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABD12922D959009934A2 /* UITextField+Extension.swift */; };
 		64C0ABD42922D9B7009934A2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABD32922D9B7009934A2 /* HomeViewModel.swift */; };
+		64C0ABD729247962009934A2 /* ResultCalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABD629247962009934A2 /* ResultCalculateViewController.swift */; };
+		64C0ABD92924797B009934A2 /* ResultCalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABD82924797B009934A2 /* ResultCalculateView.swift */; };
+		64C0ABDF29247BA5009934A2 /* ResultCalculateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABDE29247BA5009934A2 /* ResultCalculateCell.swift */; };
+		64C0ABE12925207D009934A2 /* ResultCalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABE02925207D009934A2 /* ResultCalculateViewModel.swift */; };
+		64C0ABE52925DD23009934A2 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABE42925DD23009934A2 /* Alert.swift */; };
+		64C0ABE729271EE9009934A2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABE629271EE9009934A2 /* String+Extension.swift */; };
+		64C0ABE929293A27009934A2 /* HoleriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABE829293A27009934A2 /* HoleriteModel.swift */; };
+		64C0ABEB29293B77009934A2 /* ResultCalculateCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0ABEA29293B77009934A2 /* ResultCalculateCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +61,16 @@
 		64C0ABB92922D71B009934A2 /* HoleriteAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleriteAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		64C0ABCA2922D86B009934A2 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
 		64C0ABCE2922D8F3009934A2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		64C0ABD12922D959009934A2 /* UiTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiTextField+Extension.swift"; sourceTree = "<group>"; };
+		64C0ABD12922D959009934A2 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		64C0ABD32922D9B7009934A2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		64C0ABD629247962009934A2 /* ResultCalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCalculateViewController.swift; sourceTree = "<group>"; };
+		64C0ABD82924797B009934A2 /* ResultCalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCalculateView.swift; sourceTree = "<group>"; };
+		64C0ABDE29247BA5009934A2 /* ResultCalculateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCalculateCell.swift; sourceTree = "<group>"; };
+		64C0ABE02925207D009934A2 /* ResultCalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCalculateViewModel.swift; sourceTree = "<group>"; };
+		64C0ABE42925DD23009934A2 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		64C0ABE629271EE9009934A2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		64C0ABE829293A27009934A2 /* HoleriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleriteModel.swift; sourceTree = "<group>"; };
+		64C0ABEA29293B77009934A2 /* ResultCalculateCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCalculateCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +152,7 @@
 		64C0ABC62922D7FF009934A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				64C0ABE829293A27009934A2 /* HoleriteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +160,7 @@
 		64C0ABC72922D806009934A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				64C0ABD529247941009934A2 /* ResultCalculate */,
 				64C0ABCD2922D8B1009934A2 /* Home */,
 			);
 			path = View;
@@ -151,7 +169,8 @@
 		64C0ABC82922D80D009934A2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				64C0ABD32922D9B7009934A2 /* HomeViewModel.swift */,
+				64C0ABE32925D297009934A2 /* ResultCalculate */,
+				64C0ABE22925D28F009934A2 /* Home */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				64C0ABCA2922D86B009934A2 /* ConfigurableView.swift */,
+				64C0ABE42925DD23009934A2 /* Alert.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -187,9 +207,45 @@
 		64C0ABD02922D941009934A2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				64C0ABD12922D959009934A2 /* UiTextField+Extension.swift */,
+				64C0ABD12922D959009934A2 /* UITextField+Extension.swift */,
+				64C0ABE629271EE9009934A2 /* String+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64C0ABD529247941009934A2 /* ResultCalculate */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABDD29247B91009934A2 /* Cell */,
+				64C0ABD82924797B009934A2 /* ResultCalculateView.swift */,
+				64C0ABD629247962009934A2 /* ResultCalculateViewController.swift */,
+			);
+			path = ResultCalculate;
+			sourceTree = "<group>";
+		};
+		64C0ABDD29247B91009934A2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABDE29247BA5009934A2 /* ResultCalculateCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		64C0ABE22925D28F009934A2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABD32922D9B7009934A2 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		64C0ABE32925D297009934A2 /* ResultCalculate */ = {
+			isa = PBXGroup;
+			children = (
+				64C0ABE02925207D009934A2 /* ResultCalculateViewModel.swift */,
+				64C0ABEA29293B77009934A2 /* ResultCalculateCellViewModel.swift */,
+			);
+			path = ResultCalculate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,11 +380,19 @@
 			files = (
 				64C0AB9B2922D719009934A2 /* HomeViewController.swift in Sources */,
 				64C0ABCB2922D86B009934A2 /* ConfigurableView.swift in Sources */,
+				64C0ABD729247962009934A2 /* ResultCalculateViewController.swift in Sources */,
+				64C0ABEB29293B77009934A2 /* ResultCalculateCellViewModel.swift in Sources */,
+				64C0ABE12925207D009934A2 /* ResultCalculateViewModel.swift in Sources */,
+				64C0ABDF29247BA5009934A2 /* ResultCalculateCell.swift in Sources */,
 				64C0ABD42922D9B7009934A2 /* HomeViewModel.swift in Sources */,
+				64C0ABE729271EE9009934A2 /* String+Extension.swift in Sources */,
+				64C0ABE52925DD23009934A2 /* Alert.swift in Sources */,
 				64C0AB972922D719009934A2 /* AppDelegate.swift in Sources */,
-				64C0ABD22922D959009934A2 /* UiTextField+Extension.swift in Sources */,
+				64C0ABD22922D959009934A2 /* UITextField+Extension.swift in Sources */,
 				64C0ABCF2922D8F3009934A2 /* HomeView.swift in Sources */,
+				64C0ABE929293A27009934A2 /* HoleriteModel.swift in Sources */,
 				64C0AB992922D719009934A2 /* SceneDelegate.swift in Sources */,
+				64C0ABD92924797B009934A2 /* ResultCalculateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +565,8 @@
 				INFOPLIST_FILE = HoleriteApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,9 +576,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -527,6 +596,8 @@
 				INFOPLIST_FILE = HoleriteApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -536,9 +607,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -590,9 +664,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = HoleriteApp;
 			};
 			name = Debug;
@@ -607,9 +684,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.HoleriteAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = HoleriteApp;
 			};
 			name = Release;

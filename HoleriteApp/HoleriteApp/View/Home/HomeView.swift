@@ -26,7 +26,7 @@ final class HomeView: UIView {
         tf.layer.borderWidth = 1.5
         tf.layer.borderColor = UIColor.lightGray.cgColor
         tf.font = .systemFont(ofSize: 20, weight: .regular)
-        tf.keyboardType = .namePhonePad
+        tf.keyboardType = .numberPad
         tf.textAlignment = .left
         tf.textColor = .black
         tf.clearButtonMode = .whileEditing
@@ -34,6 +34,8 @@ final class HomeView: UIView {
         tf.attributedPlaceholder = NSAttributedString(string: "Salário bruto", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
         
         tf.addPadding(.left(15))
+        
+        
         
         return tf
       }()
@@ -45,7 +47,7 @@ final class HomeView: UIView {
         tf.layer.borderWidth = 1.5
         tf.layer.borderColor = UIColor.lightGray.cgColor
         tf.font = .systemFont(ofSize: 20, weight: .regular)
-        tf.keyboardType = .namePhonePad
+        tf.keyboardType = .numberPad
         tf.textAlignment = .left
         tf.textColor = .black
         tf.clearButtonMode = .whileEditing
@@ -63,10 +65,7 @@ final class HomeView: UIView {
         bt.backgroundColor = UIColor(red: 80/255, green: 166/255, blue: 242/255, alpha: 1)
         bt.setTitle("CALCULAR", for: .normal)
         bt.layer.cornerRadius = 10
-        
-        //action
-        bt.addTarget(self, action: #selector(didTapScreen), for: .touchUpInside)
-        
+
         return bt
     }()
     
@@ -86,11 +85,13 @@ final class HomeView: UIView {
     
     private func setup() {
         initLayout()
+        addTargets()
     }
 }
 
 //MARK: - Components and Constraints
 extension HomeView : ConfigurableView {
+    
     func initSubviews() {
         addSubview(grossSalaryTextField)
         addSubview(discountTextField)
@@ -98,9 +99,10 @@ extension HomeView : ConfigurableView {
         
     }
     
+    
     func initConstraints() {
         NSLayoutConstraint.activate([
-            grossSalaryTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            grossSalaryTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
             grossSalaryTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             grossSalaryTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             grossSalaryTextField.heightAnchor.constraint(equalToConstant: 52),
@@ -123,8 +125,22 @@ extension HomeView : ConfigurableView {
 //MARK: - Action
 extension HomeView: HomeViewProtocol {
     
+    private func addTargets() {
+        grossSalaryTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        discountTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        goButton.addTarget(self, action: #selector(didTapScreen), for: .touchUpInside)
+    }
+    
+    
     @objc func didTapScreen() {
         self.delegate?.didTapScreen()
+    }
+    
+    
+    @objc final private func textFieldDidChange(_ textField: UITextField) {
+        if let amountString = textField.text?.currencyInputFormatting() {
+            textField.text = amountString
+        }
     }
 }
 
