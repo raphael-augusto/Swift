@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		645778E3292DA8BE0039C5A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645778E2292DA8BE0039C5A9 /* AppDelegate.swift */; };
+		645778E5292DA8BE0039C5A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645778E4292DA8BE0039C5A9 /* SceneDelegate.swift */; };
+		645778E7292DA8BE0039C5A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645778E6292DA8BE0039C5A9 /* HomeViewController.swift */; };
+		645778EC292DA8C00039C5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645778EB292DA8C00039C5A9 /* Assets.xcassets */; };
+		645778EF292DA8C00039C5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645778ED292DA8C00039C5A9 /* LaunchScreen.storyboard */; };
+		645778FA292DA8C00039C5A9 /* AnimalAgeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645778F9292DA8C00039C5A9 /* AnimalAgeAppTests.swift */; };
+		64577904292DA8C00039C5A9 /* AnimalAgeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577903292DA8C00039C5A9 /* AnimalAgeAppUITests.swift */; };
+		64577906292DA8C00039C5A9 /* AnimalAgeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577905292DA8C00039C5A9 /* AnimalAgeAppUITestsLaunchTests.swift */; };
+		64577919292DC9C90039C5A9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577918292DC9C90039C5A9 /* HomeView.swift */; };
+		6457791B292DCA140039C5A9 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457791A292DCA140039C5A9 /* ConfigurableView.swift */; };
+		6457791D29303B1D0039C5A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457791C29303B1D0039C5A9 /* HomeViewModel.swift */; };
+		6457792029303D620039C5A9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457791F29303D620039C5A9 /* UITextField+Extension.swift */; };
+		64577923293049580039C5A9 /* ResultAgeAnimelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577922293049580039C5A9 /* ResultAgeAnimelViewController.swift */; };
+		64577925293049640039C5A9 /* ResultAgeAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577924293049640039C5A9 /* ResultAgeAnimalView.swift */; };
+		6457792929304E6F0039C5A9 /* ResultAgeAnimalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457792829304E6F0039C5A9 /* ResultAgeAnimalViewModel.swift */; };
+		6457792B293174FB0039C5A9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457792A293174FB0039C5A9 /* Alert.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		645778F6292DA8C00039C5A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 645778D7292DA8BE0039C5A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 645778DE292DA8BE0039C5A9;
+			remoteInfo = AnimalAgeApp;
+		};
+		64577900292DA8C00039C5A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 645778D7292DA8BE0039C5A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 645778DE292DA8BE0039C5A9;
+			remoteInfo = AnimalAgeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		645778DF292DA8BE0039C5A9 /* AnimalAgeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalAgeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		645778E2292DA8BE0039C5A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		645778E4292DA8BE0039C5A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		645778E6292DA8BE0039C5A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		645778EB292DA8C00039C5A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		645778EE292DA8C00039C5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		645778F0292DA8C00039C5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		645778F5292DA8C00039C5A9 /* AnimalAgeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalAgeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		645778F9292DA8C00039C5A9 /* AnimalAgeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAgeAppTests.swift; sourceTree = "<group>"; };
+		645778FF292DA8C00039C5A9 /* AnimalAgeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalAgeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64577903292DA8C00039C5A9 /* AnimalAgeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAgeAppUITests.swift; sourceTree = "<group>"; };
+		64577905292DA8C00039C5A9 /* AnimalAgeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAgeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		64577918292DC9C90039C5A9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6457791A292DCA140039C5A9 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
+		6457791C29303B1D0039C5A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6457791F29303D620039C5A9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		64577922293049580039C5A9 /* ResultAgeAnimelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAgeAnimelViewController.swift; sourceTree = "<group>"; };
+		64577924293049640039C5A9 /* ResultAgeAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAgeAnimalView.swift; sourceTree = "<group>"; };
+		6457792829304E6F0039C5A9 /* ResultAgeAnimalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAgeAnimalViewModel.swift; sourceTree = "<group>"; };
+		6457792A293174FB0039C5A9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		645778DC292DA8BE0039C5A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		645778F2292DA8C00039C5A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		645778FC292DA8C00039C5A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		645778D6292DA8BE0039C5A9 = {
+			isa = PBXGroup;
+			children = (
+				645778E1292DA8BE0039C5A9 /* AnimalAgeApp */,
+				645778F8292DA8C00039C5A9 /* AnimalAgeAppTests */,
+				64577902292DA8C00039C5A9 /* AnimalAgeAppUITests */,
+				645778E0292DA8BE0039C5A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		645778E0292DA8BE0039C5A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				645778DF292DA8BE0039C5A9 /* AnimalAgeApp.app */,
+				645778F5292DA8C00039C5A9 /* AnimalAgeAppTests.xctest */,
+				645778FF292DA8C00039C5A9 /* AnimalAgeAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		645778E1292DA8BE0039C5A9 /* AnimalAgeApp */ = {
+			isa = PBXGroup;
+			children = (
+				6457791E29303D3A0039C5A9 /* Extension */,
+				64577915292DADFA0039C5A9 /* Utility */,
+				64577914292DADF40039C5A9 /* Model */,
+				64577913292DADE80039C5A9 /* ViewModel */,
+				64577912292DADE20039C5A9 /* View */,
+				64577916292DAE0B0039C5A9 /* Support */,
+				645778F0292DA8C00039C5A9 /* Info.plist */,
+			);
+			path = AnimalAgeApp;
+			sourceTree = "<group>";
+		};
+		645778F8292DA8C00039C5A9 /* AnimalAgeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				645778F9292DA8C00039C5A9 /* AnimalAgeAppTests.swift */,
+			);
+			path = AnimalAgeAppTests;
+			sourceTree = "<group>";
+		};
+		64577902292DA8C00039C5A9 /* AnimalAgeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64577903292DA8C00039C5A9 /* AnimalAgeAppUITests.swift */,
+				64577905292DA8C00039C5A9 /* AnimalAgeAppUITestsLaunchTests.swift */,
+			);
+			path = AnimalAgeAppUITests;
+			sourceTree = "<group>";
+		};
+		64577912292DADE20039C5A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64577917292DC9B90039C5A9 /* Home */,
+				64577921293044360039C5A9 /* ResultAgeAnimal */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64577913292DADE80039C5A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6457792729304E580039C5A9 /* ResultAgeAnimal */,
+				6457792629304E510039C5A9 /* Home */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		64577914292DADF40039C5A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64577915292DADFA0039C5A9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6457791A292DCA140039C5A9 /* ConfigurableView.swift */,
+				6457792A293174FB0039C5A9 /* Alert.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		64577916292DAE0B0039C5A9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				645778E2292DA8BE0039C5A9 /* AppDelegate.swift */,
+				645778E4292DA8BE0039C5A9 /* SceneDelegate.swift */,
+				645778EB292DA8C00039C5A9 /* Assets.xcassets */,
+				645778ED292DA8C00039C5A9 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		64577917292DC9B90039C5A9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				645778E6292DA8BE0039C5A9 /* HomeViewController.swift */,
+				64577918292DC9C90039C5A9 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6457791E29303D3A0039C5A9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6457791F29303D620039C5A9 /* UITextField+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		64577921293044360039C5A9 /* ResultAgeAnimal */ = {
+			isa = PBXGroup;
+			children = (
+				64577922293049580039C5A9 /* ResultAgeAnimelViewController.swift */,
+				64577924293049640039C5A9 /* ResultAgeAnimalView.swift */,
+			);
+			path = ResultAgeAnimal;
+			sourceTree = "<group>";
+		};
+		6457792629304E510039C5A9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6457791C29303B1D0039C5A9 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6457792729304E580039C5A9 /* ResultAgeAnimal */ = {
+			isa = PBXGroup;
+			children = (
+				6457792829304E6F0039C5A9 /* ResultAgeAnimalViewModel.swift */,
+			);
+			path = ResultAgeAnimal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		645778DE292DA8BE0039C5A9 /* AnimalAgeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64577909292DA8C00039C5A9 /* Build configuration list for PBXNativeTarget "AnimalAgeApp" */;
+			buildPhases = (
+				645778DB292DA8BE0039C5A9 /* Sources */,
+				645778DC292DA8BE0039C5A9 /* Frameworks */,
+				645778DD292DA8BE0039C5A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimalAgeApp;
+			productName = AnimalAgeApp;
+			productReference = 645778DF292DA8BE0039C5A9 /* AnimalAgeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		645778F4292DA8C00039C5A9 /* AnimalAgeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6457790C292DA8C00039C5A9 /* Build configuration list for PBXNativeTarget "AnimalAgeAppTests" */;
+			buildPhases = (
+				645778F1292DA8C00039C5A9 /* Sources */,
+				645778F2292DA8C00039C5A9 /* Frameworks */,
+				645778F3292DA8C00039C5A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				645778F7292DA8C00039C5A9 /* PBXTargetDependency */,
+			);
+			name = AnimalAgeAppTests;
+			productName = AnimalAgeAppTests;
+			productReference = 645778F5292DA8C00039C5A9 /* AnimalAgeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		645778FE292DA8C00039C5A9 /* AnimalAgeAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6457790F292DA8C00039C5A9 /* Build configuration list for PBXNativeTarget "AnimalAgeAppUITests" */;
+			buildPhases = (
+				645778FB292DA8C00039C5A9 /* Sources */,
+				645778FC292DA8C00039C5A9 /* Frameworks */,
+				645778FD292DA8C00039C5A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64577901292DA8C00039C5A9 /* PBXTargetDependency */,
+			);
+			name = AnimalAgeAppUITests;
+			productName = AnimalAgeAppUITests;
+			productReference = 645778FF292DA8C00039C5A9 /* AnimalAgeAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		645778D7292DA8BE0039C5A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					645778DE292DA8BE0039C5A9 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					645778F4292DA8C00039C5A9 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 645778DE292DA8BE0039C5A9;
+					};
+					645778FE292DA8C00039C5A9 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 645778DE292DA8BE0039C5A9;
+					};
+				};
+			};
+			buildConfigurationList = 645778DA292DA8BE0039C5A9 /* Build configuration list for PBXProject "AnimalAgeApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 645778D6292DA8BE0039C5A9;
+			productRefGroup = 645778E0292DA8BE0039C5A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				645778DE292DA8BE0039C5A9 /* AnimalAgeApp */,
+				645778F4292DA8C00039C5A9 /* AnimalAgeAppTests */,
+				645778FE292DA8C00039C5A9 /* AnimalAgeAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		645778DD292DA8BE0039C5A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				645778EF292DA8C00039C5A9 /* LaunchScreen.storyboard in Resources */,
+				645778EC292DA8C00039C5A9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		645778F3292DA8C00039C5A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		645778FD292DA8C00039C5A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		645778DB292DA8BE0039C5A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6457791B292DCA140039C5A9 /* ConfigurableView.swift in Sources */,
+				6457792929304E6F0039C5A9 /* ResultAgeAnimalViewModel.swift in Sources */,
+				6457791D29303B1D0039C5A9 /* HomeViewModel.swift in Sources */,
+				6457792029303D620039C5A9 /* UITextField+Extension.swift in Sources */,
+				645778E7292DA8BE0039C5A9 /* HomeViewController.swift in Sources */,
+				64577925293049640039C5A9 /* ResultAgeAnimalView.swift in Sources */,
+				64577919292DC9C90039C5A9 /* HomeView.swift in Sources */,
+				645778E3292DA8BE0039C5A9 /* AppDelegate.swift in Sources */,
+				6457792B293174FB0039C5A9 /* Alert.swift in Sources */,
+				645778E5292DA8BE0039C5A9 /* SceneDelegate.swift in Sources */,
+				64577923293049580039C5A9 /* ResultAgeAnimelViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		645778F1292DA8C00039C5A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				645778FA292DA8C00039C5A9 /* AnimalAgeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		645778FB292DA8C00039C5A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64577906292DA8C00039C5A9 /* AnimalAgeAppUITestsLaunchTests.swift in Sources */,
+				64577904292DA8C00039C5A9 /* AnimalAgeAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		645778F7292DA8C00039C5A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 645778DE292DA8BE0039C5A9 /* AnimalAgeApp */;
+			targetProxy = 645778F6292DA8C00039C5A9 /* PBXContainerItemProxy */;
+		};
+		64577901292DA8C00039C5A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 645778DE292DA8BE0039C5A9 /* AnimalAgeApp */;
+			targetProxy = 64577900292DA8C00039C5A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		645778ED292DA8C00039C5A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				645778EE292DA8C00039C5A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64577907292DA8C00039C5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64577908292DA8C00039C5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6457790A292DA8C00039C5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnimalAgeApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.AnimalAgeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6457790B292DA8C00039C5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnimalAgeApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.AnimalAgeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6457790D292DA8C00039C5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.AnimalAgeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalAgeApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AnimalAgeApp";
+			};
+			name = Debug;
+		};
+		6457790E292DA8C00039C5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.AnimalAgeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalAgeApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AnimalAgeApp";
+			};
+			name = Release;
+		};
+		64577910292DA8C00039C5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.AnimalAgeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalAgeApp;
+			};
+			name = Debug;
+		};
+		64577911292DA8C00039C5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.AnimalAgeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalAgeApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		645778DA292DA8BE0039C5A9 /* Build configuration list for PBXProject "AnimalAgeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64577907292DA8C00039C5A9 /* Debug */,
+				64577908292DA8C00039C5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64577909292DA8C00039C5A9 /* Build configuration list for PBXNativeTarget "AnimalAgeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6457790A292DA8C00039C5A9 /* Debug */,
+				6457790B292DA8C00039C5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6457790C292DA8C00039C5A9 /* Build configuration list for PBXNativeTarget "AnimalAgeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6457790D292DA8C00039C5A9 /* Debug */,
+				6457790E292DA8C00039C5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6457790F292DA8C00039C5A9 /* Build configuration list for PBXNativeTarget "AnimalAgeAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64577910292DA8C00039C5A9 /* Debug */,
+				64577911292DA8C00039C5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 645778D7292DA8BE0039C5A9 /* Project object */;
+}
