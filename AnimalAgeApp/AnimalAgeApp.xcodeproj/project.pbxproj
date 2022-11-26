@@ -17,7 +17,6 @@
 		64577906292DA8C00039C5A9 /* AnimalAgeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577905292DA8C00039C5A9 /* AnimalAgeAppUITestsLaunchTests.swift */; };
 		64577919292DC9C90039C5A9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577918292DC9C90039C5A9 /* HomeView.swift */; };
 		6457791B292DCA140039C5A9 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457791A292DCA140039C5A9 /* ConfigurableView.swift */; };
-		6457791D29303B1D0039C5A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457791C29303B1D0039C5A9 /* HomeViewModel.swift */; };
 		6457792029303D620039C5A9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457791F29303D620039C5A9 /* UITextField+Extension.swift */; };
 		64577923293049580039C5A9 /* ResultAgeAnimelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577922293049580039C5A9 /* ResultAgeAnimelViewController.swift */; };
 		64577925293049640039C5A9 /* ResultAgeAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64577924293049640039C5A9 /* ResultAgeAnimalView.swift */; };
@@ -57,7 +56,6 @@
 		64577905292DA8C00039C5A9 /* AnimalAgeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAgeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		64577918292DC9C90039C5A9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6457791A292DCA140039C5A9 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
-		6457791C29303B1D0039C5A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6457791F29303D620039C5A9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		64577922293049580039C5A9 /* ResultAgeAnimelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAgeAnimelViewController.swift; sourceTree = "<group>"; };
 		64577924293049640039C5A9 /* ResultAgeAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAgeAnimalView.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				6457792729304E580039C5A9 /* ResultAgeAnimal */,
-				6457792629304E510039C5A9 /* Home */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -210,14 +207,6 @@
 				64577924293049640039C5A9 /* ResultAgeAnimalView.swift */,
 			);
 			path = ResultAgeAnimal;
-			sourceTree = "<group>";
-		};
-		6457792629304E510039C5A9 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				6457791C29303B1D0039C5A9 /* HomeViewModel.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		6457792729304E580039C5A9 /* ResultAgeAnimal */ = {
@@ -360,7 +349,6 @@
 			files = (
 				6457791B292DCA140039C5A9 /* ConfigurableView.swift in Sources */,
 				6457792929304E6F0039C5A9 /* ResultAgeAnimalViewModel.swift in Sources */,
-				6457791D29303B1D0039C5A9 /* HomeViewModel.swift in Sources */,
 				6457792029303D620039C5A9 /* UITextField+Extension.swift in Sources */,
 				645778E7292DA8BE0039C5A9 /* HomeViewController.swift in Sources */,
 				64577925293049640039C5A9 /* ResultAgeAnimalView.swift in Sources */,

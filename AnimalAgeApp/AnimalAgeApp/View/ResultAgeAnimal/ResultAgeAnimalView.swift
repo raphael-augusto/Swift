@@ -11,7 +11,15 @@ import UIKit
 final class ResultAgeAnimalView: UIView {
     
     //MARK: - Properts
-    lazy var resultAgeLabel: UILabel = {
+    lazy var resultAgeHumanLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 26)
+        
+        return label
+    }()
+    
+    lazy var resultAgeAnimalLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 26)
@@ -53,16 +61,20 @@ extension ResultAgeAnimalView : ConfigurableView {
     }
     
     func initSubviews() {
-        addSubview(resultAgeLabel)
+        addSubview(resultAgeHumanLabel)
+        addSubview(resultAgeAnimalLabel)
         addSubview(animalImage)
     }
     
     func initConstraints() {
         NSLayoutConstraint.activate([
-            resultAgeLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
-            resultAgeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            resultAgeHumanLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            resultAgeHumanLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             
-            animalImage.topAnchor.constraint(equalTo: resultAgeLabel.bottomAnchor, constant: 20),
+            resultAgeAnimalLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            resultAgeAnimalLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            
+            animalImage.topAnchor.constraint(equalTo: resultAgeAnimalLabel.bottomAnchor, constant: 20),
             animalImage.centerXAnchor.constraint(equalTo: centerXAnchor),
             animalImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             animalImage.widthAnchor.constraint(equalToConstant: 280),

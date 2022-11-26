@@ -8,9 +8,8 @@
 import UIKit
 
 protocol HomeViewProtocol: AnyObject {
-    func didTapAnimalPortSmallButton ()
-    func didTapAnimalPortMediumButton ()
-    func didTapAnimalPortBigButton ()
+    func suitDidChange(_ segmentedControl: UISegmentedControl)
+    func calculateDidButton()
 }
 
 
@@ -26,7 +25,7 @@ final class HomeView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = "Informe a idade do animal:"
+        label.text = "Informe o ano de nascimento:"
         
         return label
     }()
@@ -43,7 +42,7 @@ final class HomeView: UIView {
         tf.textColor = .black
         tf.clearButtonMode = .whileEditing
         tf.backgroundColor = .white
-        tf.attributedPlaceholder = NSAttributedString(string: "Idade do animal", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        tf.attributedPlaceholder = NSAttributedString(string: "Ano", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
         
         tf.addPadding(.left(15))
         
@@ -59,54 +58,27 @@ final class HomeView: UIView {
         
         return label
     }()
-    
-    
-    private lazy var containerButton: UIStackView = {
-        let container = UIStackView(frame: .zero)
-        container.translatesAutoresizingMaskIntoConstraints = false
-        container.alignment = .center
-        container.distribution = .fillEqually
-        container.axis = .horizontal
-        container.spacing = 5
-        container.addArrangedSubview(smallButton)
-        container.addArrangedSubview(mediumButton)
-        container.addArrangedSubview(bigButton)
         
-        return container
+    private lazy var segmentedControl: UISegmentedControl = {
+        let items = ["Pequeno","Médio","Grande"]
+        let segment = UISegmentedControl(items: items)
+        segment.translatesAutoresizingMaskIntoConstraints = false
+        segment.selectedSegmentTintColor = UIColor(red: 80/255, green: 166/255, blue: 242/255, alpha: 1)
+        
+        return segment
     }()
     
     
-    private lazy var smallButton: UIButton = {
+    
+    private lazy var calculateButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.backgroundColor = UIColor(red: 80/255, green: 166/255, blue: 242/255, alpha: 1)
-        bt.setTitle("Pequeno", for: .normal)
+        bt.setTitle("Calcular", for: .normal)
         bt.layer.cornerRadius = 10
 
         return bt
     }()
-    
-    
-    private lazy var mediumButton: UIButton = {
-        let bt = UIButton()
-        bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.backgroundColor = UIColor(red: 80/255, green: 166/255, blue: 242/255, alpha: 1)
-        bt.setTitle("Médio", for: .normal)
-        bt.layer.cornerRadius = 10
-
-        return bt
-    }()
-    
-    private lazy var bigButton: UIButton = {
-        let bt = UIButton()
-        bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.backgroundColor = UIColor(red: 80/255, green: 166/255, blue: 242/255, alpha: 1)
-        bt.setTitle("Grande", for: .normal)
-        bt.layer.cornerRadius = 10
-
-        return bt
-    }()
-    
     
     
     //MARK: - Inits
@@ -138,7 +110,8 @@ extension HomeView : ConfigurableView {
         addSubview(ageAnimalLabel)
         addSubview(ageAnimalTextField)
         addSubview(sizeOfTheAnimalLabel)
-        addSubview(containerButton)
+        addSubview(segmentedControl)
+        addSubview(calculateButton)
     }
     
     func initConstraints() {
@@ -155,12 +128,16 @@ extension HomeView : ConfigurableView {
             sizeOfTheAnimalLabel.topAnchor.constraint(equalTo: ageAnimalTextField.bottomAnchor, constant: 20),
             sizeOfTheAnimalLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
-            containerButton.topAnchor.constraint(equalTo: sizeOfTheAnimalLabel.bottomAnchor, constant: 8),
-            containerButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            containerButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            containerButton.heightAnchor.constraint(equalToConstant: 80),
             
-
+            segmentedControl.topAnchor.constraint(equalTo: sizeOfTheAnimalLabel.bottomAnchor, constant: 20),
+            segmentedControl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            segmentedControl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            segmentedControl.heightAnchor.constraint(equalToConstant: 40),
+            
+            calculateButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -40),
+            calculateButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            calculateButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            calculateButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
     
@@ -169,23 +146,20 @@ extension HomeView : ConfigurableView {
 
 //MARK: - Action
 extension HomeView: HomeViewProtocol {
+    
     private func addTargets() {
-        smallButton.addTarget(self, action: #selector(didTapAnimalPortSmallButton), for: .touchUpInside)
-        mediumButton.addTarget(self, action: #selector(didTapAnimalPortMediumButton), for: .touchUpInside)
-        bigButton.addTarget(self, action: #selector(didTapAnimalPortBigButton), for: .touchUpInside)
+        segmentedControl.addTarget(self, action: #selector(suitDidChange(_:)), for: .valueChanged)
+        calculateButton.addTarget(self, action: #selector(calculateDidButton), for: .touchUpInside)
     }
     
     
-    @objc func didTapAnimalPortSmallButton() {
-        self.delegate?.didTapAnimalPortSmallButton()
+    
+    @objc func suitDidChange(_ segmentedControl: UISegmentedControl) {
+        self.delegate?.suitDidChange(segmentedControl)
     }
     
-    @objc func didTapAnimalPortMediumButton() {
-        self.delegate?.didTapAnimalPortMediumButton()
-    }
-    
-    @objc func didTapAnimalPortBigButton() {
-        self.delegate?.didTapAnimalPortBigButton()
+    @objc func calculateDidButton() {
+        self.delegate?.calculateDidButton()
     }
 }
 

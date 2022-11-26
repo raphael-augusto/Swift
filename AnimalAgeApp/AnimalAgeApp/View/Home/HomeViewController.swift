@@ -8,12 +8,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    //MARK: - ViewModel
-    private var homeViewModel = HomeViewModel()
-    
+        
     //MARK: - Variables
     private var alert: Alert?
+    private var dataPortAnimal: String? = ""
     
     
     //MARK: - Properts
@@ -32,7 +30,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = homeViewModel.dataTitle
+        title = "Age Animal"
         createDismissKeyboardTapGesture()
         self.alert = Alert(controller: self)
     }
@@ -45,47 +43,34 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
-    
-    func didTapAnimalPortSmallButton() {
-        print("Pequeno")
-        guard let dataAge = homeView.ageAnimalTextField.text else { return }
+ 
+    func suitDidChange(_ segmentedControl: UISegmentedControl) {
         
-        if dataAge != "" {
-            let resultAgeAnimelVC = ResultAgeAnimelViewController(age: dataAge, portAnimal: "small")
-            let navVC  = UINavigationController(rootViewController: resultAgeAnimelVC)
-            navVC.modalPresentationStyle = .formSheet
-            self.present(navVC, animated: true, completion: nil)
-        } else {
-            print("ERRRO")
-            self.alert?.getAlert(title: "Atenção", message: "Campo de idade é obrigatório ser preenchido!")
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            self.dataPortAnimal = "small"
+        case 1:
+            self.dataPortAnimal = "medium"
+        case 2:
+            self.dataPortAnimal = "big"
+        default:
+            print("ERRO")
         }
-
+        
     }
     
-    func didTapAnimalPortMediumButton() {
-        print("Médio")
-        guard let dataAge = homeView.ageAnimalTextField.text else { return }
-        
-        if dataAge != "" {
-            let resultAgeAnimelVC = ResultAgeAnimelViewController(age: dataAge, portAnimal: "medium")
-            let navVC  = UINavigationController(rootViewController: resultAgeAnimelVC)
-            navVC.modalPresentationStyle = .formSheet
-            self.present(navVC, animated: true, completion: nil)
-        } else {
-            print("ERRRO")
-            self.alert?.getAlert(title: "Atenção", message: "Campo de idade é obrigatório ser preenchido!")
-        }
-    }
     
-    func didTapAnimalPortBigButton() {
-        print("Grande")
+    func calculateDidButton() {
         guard let dataAge = homeView.ageAnimalTextField.text else { return }
+        guard let dataPort = self.dataPortAnimal else { return }
+        
         
         if dataAge != "" {
-            let resultAgeAnimelVC = ResultAgeAnimelViewController(age: dataAge, portAnimal: "big")
+            let resultAgeAnimelVC = ResultAgeAnimelViewController(age: dataAge, portAnimal:dataPort)
             let navVC  = UINavigationController(rootViewController: resultAgeAnimelVC)
             navVC.modalPresentationStyle = .formSheet
             self.present(navVC, animated: true, completion: nil)
+            
         } else {
             print("ERRRO")
             self.alert?.getAlert(title: "Atenção", message: "Campo de idade é obrigatório ser preenchido!")

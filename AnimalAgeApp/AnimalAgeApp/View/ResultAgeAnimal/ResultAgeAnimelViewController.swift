@@ -50,7 +50,10 @@ class ResultAgeAnimelViewController: UIViewController {
     
     
     func getDate() {
-        resultAgeAnimalView.animalImage.image =  resultAgeAnimalViewModel.AnimalImage(portAnimal: PortAnimal(rawValue: self.portAnimal!)!)
-        resultAgeAnimalView.resultAgeLabel.text = resultAgeAnimalViewModel.AnimalAge(age: self.age ?? "0", portAnimal: PortAnimal(rawValue: self.portAnimal!)!)
+        resultAgeAnimalView.animalImage.image =  resultAgeAnimalViewModel.animalImage(portAnimal: PortAnimal(rawValue: self.portAnimal!)!)
+        
+        resultAgeAnimalView.resultAgeHumanLabel.text = resultAgeAnimalViewModel.humanAge(age: self.age ?? "0", portAnimal: PortAnimal(rawValue: self.portAnimal!)!)
+        
+        resultAgeAnimalView.resultAgeAnimalLabel.text = resultAgeAnimalViewModel.animalAge(age: self.age ?? "0", portAnimal: PortAnimal(rawValue: self.portAnimal!)!)
     }
 }

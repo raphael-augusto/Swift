@@ -28,23 +28,72 @@ enum PortAnimal: String {
 
 class ResultAgeAnimalViewModel {
     
-    public func AnimalAge (age: String, portAnimal: PortAnimal) -> String {
+    
+    public func animalAge (age: String, portAnimal: PortAnimal) -> String {
         switch portAnimal {
         case .small:
-            let data = (Double(age) ?? 0) * 6
-            print(data)
-            return "Sua humana idade é: \(String(data))"
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY"
+            let year = dateFormatter.string(from: date)
+        
+            let data = (Double(year)! - (Double(age) ?? 0))
+            return "Sua idade canina é: \(String(data))"
+            
         case .medium:
-            let data = (Double(age) ?? 0)  * 7
-            return "Sua humana idade é: \(String(data))"
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY"
+            let year = dateFormatter.string(from: date)
+        
+            let data = (Double(year)! - (Double(age) ?? 0))
+            return "Sua idade canina  é: \(String(data))"
+            
         case .big:
-            let data = (Double(age) ?? 0)  * 7.5
-            return "Sua humana idade é: \(String(data))"
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY"
+            let year = dateFormatter.string(from: date)
+            
+            let data = (Double(year)! - (Double(age) ?? 0))
+            return "Sua idade canina  é: \(String(data))"
         }
     }
     
     
-    public func AnimalImage(portAnimal: PortAnimal) -> UIImage  {
+    public func humanAge (age: String, portAnimal: PortAnimal) -> String {
+        switch portAnimal {
+        case .small:
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY"
+            let year = dateFormatter.string(from: date)
+        
+            let data = (Double(year)! - (Double(age) ?? 0)) * 6
+            return "Sua idade humana é: \(String(data))"
+            
+        case .medium:
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY"
+            let year = dateFormatter.string(from: date)
+        
+            let data = (Double(year)! - (Double(age) ?? 0))  * 7
+            return "Sua idade humana é: \(String(data))"
+            
+        case .big:
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY"
+            let year = dateFormatter.string(from: date)
+            
+            let data = (Double(year)! - (Double(age) ?? 0))  * 7.5
+            return "Sua idade humana é: \(String(data))"
+        }
+    }
+    
+    
+    public func animalImage(portAnimal: PortAnimal) -> UIImage  {
         switch portAnimal {
         case .small:
             return portAnimal.image
