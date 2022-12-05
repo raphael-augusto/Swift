@@ -52,16 +52,14 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DashboardViewCell.identifier, for: indexPath) as? DashboardViewCell else { return UITableViewCell() }
     
-        cell.setupCell(cell: self.dashboardViewModel.getIndex(indexPath: indexPath))
+        cell.setupCell(cell: self.dashboardViewModel.getAnimal(indexPath: indexPath))
         
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let dataIndexPath = self.dashboardViewModel.getIndex(indexPath: indexPath)
-        
-        print(dataIndexPath)
+        let dataIndexPath = self.dashboardViewModel.getAnimal(indexPath: indexPath)
         
         self.alert?.getAlert(title: "Atenção", message: "Nome da raça selecionada é: \(dataIndexPath.name!)")
     }

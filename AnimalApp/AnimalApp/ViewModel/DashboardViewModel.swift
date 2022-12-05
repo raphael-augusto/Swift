@@ -16,8 +16,8 @@ class DashboardViewModel {
     
     public func getAnimalData () {
         let names = ["Persa", "Siamês", "Maine Coon", "Angorá", "Sphynx",
-                     "Ragdoll","Ashera","American Shorthair", "Exótico","SRD - Sem Raça Definida"]
-        let data = randomElementsFromArray(names, numberOfElements: names.count)!
+                     "Ragdoll","Ashera","American Shorthair", "Exótico","SRD - Sem Raça Definida"].shuffled()
+        let data = names//randomElementsFromArray(names, numberOfElements: names.count)!
         
         for name in data {
             dataAnimal.animal.append(AnimalData(name: name))
@@ -30,22 +30,8 @@ class DashboardViewModel {
     }
     
     
-    func getIndex(indexPath: IndexPath) -> AnimalData {
+    func getAnimal(indexPath: IndexPath) -> AnimalData {
         return dataAnimal.animal[indexPath.row]
     }
     
-    
-    private func randomElementsFromArray<Generic>(_ array: [Generic], numberOfElements: Int) -> [Generic]? {
-        guard array.count >= numberOfElements else { return nil }
-        
-        var toDeplete = array
-        var toReturn = [Generic]()
-        
-        while toReturn.count < numberOfElements {
-            toReturn.append(toDeplete.remove(at: Int.random(in: 0..<toDeplete.count)))
-        }
-        
-        
-        return toReturn
-    }
 }
