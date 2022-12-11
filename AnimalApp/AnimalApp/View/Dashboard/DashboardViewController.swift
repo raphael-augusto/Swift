@@ -61,7 +61,15 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dataIndexPath = self.dashboardViewModel.getAnimal(indexPath: indexPath)
         
-        self.alert?.getAlert(title: "Atenção", message: "Nome da raça selecionada é: \(dataIndexPath.name!)")
+        if dataIndexPath.name == "IMC" {
+            let homeIMC = HomeIMCViewController()
+            self.navigationController?.pushViewController(homeIMC, animated: true)
+            
+        }else {
+            self.alert?.getAlert(title: "Atenção", message: "Nome da raça selecionada é: \(dataIndexPath.name!)")
+        }
+        
+        
     }
     
     
