@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		647E2B192940222F0072C80D /* HomeIMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B182940222F0072C80D /* HomeIMCViewController.swift */; };
+		647E2B1D294023EA0072C80D /* ResultIMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B1C294023EA0072C80D /* ResultIMCViewController.swift */; };
+		647E2B1F294024420072C80D /* HomeIMCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B1E294024420072C80D /* HomeIMCView.swift */; };
+		647E2B22294027E60072C80D /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B21294027E60072C80D /* UITextField+Extension.swift */; };
+		647E2B2629402C270072C80D /* HomeIMCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B2529402C270072C80D /* HomeIMCViewModel.swift */; };
+		647E2B2829402E5D0072C80D /* IMCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B2729402E5D0072C80D /* IMCModel.swift */; };
+		647E2B2A2940313B0072C80D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B292940313B0072C80D /* String+Extension.swift */; };
+		647E2B2D2945564D0072C80D /* ResultIMCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B2C2945564D0072C80D /* ResultIMCViewModel.swift */; };
+		647E2B2F29455C090072C80D /* ResultIMCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E2B2E29455C090072C80D /* ResultIMCView.swift */; };
 		64BE1DC22936E490004D8052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BE1DC12936E490004D8052 /* AppDelegate.swift */; };
 		64BE1DC42936E490004D8052 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BE1DC32936E490004D8052 /* SceneDelegate.swift */; };
 		64BE1DC62936E490004D8052 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BE1DC52936E490004D8052 /* DashboardViewController.swift */; };
@@ -41,6 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		647E2B182940222F0072C80D /* HomeIMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIMCViewController.swift; sourceTree = "<group>"; };
+		647E2B1C294023EA0072C80D /* ResultIMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultIMCViewController.swift; sourceTree = "<group>"; };
+		647E2B1E294024420072C80D /* HomeIMCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIMCView.swift; sourceTree = "<group>"; };
+		647E2B21294027E60072C80D /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		647E2B2529402C270072C80D /* HomeIMCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIMCViewModel.swift; sourceTree = "<group>"; };
+		647E2B2729402E5D0072C80D /* IMCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCModel.swift; sourceTree = "<group>"; };
+		647E2B292940313B0072C80D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		647E2B2C2945564D0072C80D /* ResultIMCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultIMCViewModel.swift; sourceTree = "<group>"; };
+		647E2B2E29455C090072C80D /* ResultIMCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultIMCView.swift; sourceTree = "<group>"; };
 		64BE1DBE2936E490004D8052 /* AnimalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BE1DC12936E490004D8052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64BE1DC32936E490004D8052 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +104,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		647E2B17294022170072C80D /* HomeIMC */ = {
+			isa = PBXGroup;
+			children = (
+				647E2B182940222F0072C80D /* HomeIMCViewController.swift */,
+				647E2B1E294024420072C80D /* HomeIMCView.swift */,
+			);
+			path = HomeIMC;
+			sourceTree = "<group>";
+		};
+		647E2B1A294023D00072C80D /* ResultIMC */ = {
+			isa = PBXGroup;
+			children = (
+				647E2B1C294023EA0072C80D /* ResultIMCViewController.swift */,
+				647E2B2E29455C090072C80D /* ResultIMCView.swift */,
+			);
+			path = ResultIMC;
+			sourceTree = "<group>";
+		};
+		647E2B20294027D00072C80D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				647E2B21294027E60072C80D /* UITextField+Extension.swift */,
+				647E2B292940313B0072C80D /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		647E2B2329402C040072C80D /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				64BE1DFE29398432004D8052 /* DashboardViewModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		647E2B2429402C110072C80D /* HomeIMC */ = {
+			isa = PBXGroup;
+			children = (
+				647E2B2529402C270072C80D /* HomeIMCViewModel.swift */,
+			);
+			path = HomeIMC;
+			sourceTree = "<group>";
+		};
+		647E2B2B294556320072C80D /* ResultIMC */ = {
+			isa = PBXGroup;
+			children = (
+				647E2B2C2945564D0072C80D /* ResultIMCViewModel.swift */,
+			);
+			path = ResultIMC;
+			sourceTree = "<group>";
+		};
 		64BE1DB52936E490004D8052 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +178,7 @@
 		64BE1DC02936E490004D8052 /* AnimalApp */ = {
 			isa = PBXGroup;
 			children = (
+				647E2B20294027D00072C80D /* Extensions */,
 				64BE1DF52936E5C3004D8052 /* Utility */,
 				64BE1DF42936E5B9004D8052 /* Model */,
 				64BE1DF32936E5B0004D8052 /* ViewModel */,
@@ -150,9 +220,9 @@
 		64BE1DF22936E5AA004D8052 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				647E2B1A294023D00072C80D /* ResultIMC */,
+				647E2B17294022170072C80D /* HomeIMC */,
 				64BE1DFA2936E8F9004D8052 /* Dashboard */,
-				64BE1DC52936E490004D8052 /* DashboardViewController.swift */,
-				64BE1DF62936E678004D8052 /* DashboardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,7 +230,9 @@
 		64BE1DF32936E5B0004D8052 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				64BE1DFE29398432004D8052 /* DashboardViewModel.swift */,
+				647E2B2B294556320072C80D /* ResultIMC */,
+				647E2B2429402C110072C80D /* HomeIMC */,
+				647E2B2329402C040072C80D /* Dashboard */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				64BE1E00293984B2004D8052 /* AnimalRaceModel.swift */,
+				647E2B2729402E5D0072C80D /* IMCModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +258,8 @@
 		64BE1DFA2936E8F9004D8052 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				64BE1DC52936E490004D8052 /* DashboardViewController.swift */,
+				64BE1DF62936E678004D8052 /* DashboardView.swift */,
 				64BE1DFB2936E96E004D8052 /* Cell */,
 			);
 			path = Dashboard;
@@ -328,15 +403,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647E2B2A2940313B0072C80D /* String+Extension.swift in Sources */,
 				64BE1E03293AB449004D8052 /* Alert.swift in Sources */,
+				647E2B192940222F0072C80D /* HomeIMCViewController.swift in Sources */,
 				64BE1DF92936E696004D8052 /* ConfigurableView.swift in Sources */,
 				64BE1DC62936E490004D8052 /* DashboardViewController.swift in Sources */,
+				647E2B2F29455C090072C80D /* ResultIMCView.swift in Sources */,
 				64BE1DF72936E678004D8052 /* DashboardView.swift in Sources */,
+				647E2B2D2945564D0072C80D /* ResultIMCViewModel.swift in Sources */,
 				64BE1DFD2936E996004D8052 /* DashboardViewCell.swift in Sources */,
 				64BE1DC22936E490004D8052 /* AppDelegate.swift in Sources */,
+				647E2B2629402C270072C80D /* HomeIMCViewModel.swift in Sources */,
 				64BE1DC42936E490004D8052 /* SceneDelegate.swift in Sources */,
 				64BE1E01293984B2004D8052 /* AnimalRaceModel.swift in Sources */,
+				647E2B1F294024420072C80D /* HomeIMCView.swift in Sources */,
+				647E2B22294027E60072C80D /* UITextField+Extension.swift in Sources */,
+				647E2B2829402E5D0072C80D /* IMCModel.swift in Sources */,
 				64BE1DFF29398432004D8052 /* DashboardViewModel.swift in Sources */,
+				647E2B1D294023EA0072C80D /* ResultIMCViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

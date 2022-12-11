@@ -16,7 +16,7 @@ class DashboardViewModel {
     
     public func getAnimalData () {
         let names = ["Persa", "Siamês", "Maine Coon", "Angorá", "Sphynx",
-                     "Ragdoll","Ashera","American Shorthair", "Exótico","SRD - Sem Raça Definida"].shuffled()
+                     "Ragdoll","Ashera","American Shorthair", "Exótico","SRD - Sem Raça Definida", "IMC"].shuffled()
         let data = names
         
         for name in data {
