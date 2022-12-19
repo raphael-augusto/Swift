@@ -15,7 +15,7 @@ final class DashboardViewCell: UITableViewCell {
         
     
     //MARK: - Properts
-    private lazy var nameTitle: UILabel = {
+    lazy var nameTitle: UILabel = {
         let lb = UILabel()
         lb.font = UIFont.boldSystemFont(ofSize: 16)
         lb.translatesAutoresizingMaskIntoConstraints = false
@@ -40,8 +40,8 @@ final class DashboardViewCell: UITableViewCell {
     
     
     //MARK: - Setup Cell
-    public func setupCell(cell: AnimalData) {
-        self.nameTitle.text  = cell.name
+    public func setupCell(cell: String) {
+        self.nameTitle.text  = cell
     }
 }
 

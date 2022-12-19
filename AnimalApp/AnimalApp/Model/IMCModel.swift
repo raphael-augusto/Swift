@@ -8,7 +8,11 @@
 import Foundation
 
 
-struct IMCData {
+struct IMCData: DescriptionProtocol {
+    var descriptionName: String? {
+        "Indice de Massa Muscular"
+    }
+    
     var weight: String?
     var height: String?
 }

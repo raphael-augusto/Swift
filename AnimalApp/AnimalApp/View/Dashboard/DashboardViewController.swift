@@ -34,7 +34,7 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         self.alert = Alert(controller: self)
         
-        dashboardViewModel.getAnimalData()
+        dashboardViewModel.getData()
     }
     
 }
@@ -44,7 +44,7 @@ class DashboardViewController: UIViewController {
 extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dashboardViewModel.count
+        return self.dashboardViewModel.count
     }
     
     
@@ -52,24 +52,22 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DashboardViewCell.identifier, for: indexPath) as? DashboardViewCell else { return UITableViewCell() }
     
-        cell.setupCell(cell: self.dashboardViewModel.getAnimal(indexPath: indexPath))
-        
+        cell.setupCell(cell: self.dashboardViewModel.getNames(indexPath: indexPath))
+
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let dataIndexPath = self.dashboardViewModel.getAnimal(indexPath: indexPath)
+        let dataIndexPath = self.dashboardViewModel.getNames(indexPath: indexPath)        
         
-        if dataIndexPath.name == "IMC" {
+        if dataIndexPath.description == IMCData().descriptionName {
             let homeIMC = HomeIMCViewController()
             self.navigationController?.pushViewController(homeIMC, animated: true)
-            
+
         }else {
-            self.alert?.getAlert(title: "Atenção", message: "Nome da raça selecionada é: \(dataIndexPath.name!)")
+            self.alert?.getAlert(title: "Atenção", message: "Nome da raça selecionada é: \(dataIndexPath.description)")
         }
-        
-        
     }
     
     
