@@ -15,28 +15,18 @@ protocol DescriptionProtocol {
 
 class DashboardViewModel {
 
-    private(set) var dataValue: [DescriptionProtocol] = []
-    
-
-    public func getData () {
-        let names = [AnimalData(descriptionName: "Persa"),
-                     AnimalData(descriptionName: "Siamês"),
-                     AnimalData(descriptionName: "Maine Coon"),
-                     AnimalData(descriptionName: "Angorá"),
-                     AnimalData(descriptionName: "Sphynx"),
-                     AnimalData(descriptionName: "Ragdoll"),
-                     AnimalData(descriptionName: "Ashera"),
-                     AnimalData(descriptionName: "American Shorthair"),
-                     AnimalData(descriptionName: "Exótico"),
-                     AnimalData(descriptionName: "SRD - Sem Raça Definida"),
-                     IMCData()
-        ].shuffled()
-
-        
-        for name in names {
-            self.dataValue.append(name as! any DescriptionProtocol)
-        }
-    }
+    private(set) var dataValue: [DescriptionProtocol] = [AnimalData(descriptionName: "Persa"),
+                                                         AnimalData(descriptionName: "Siamês"),
+                                                         AnimalData(descriptionName: "Maine Coon"),
+                                                         AnimalData(descriptionName: "Angorá"),
+                                                         AnimalData(descriptionName: "Sphynx"),
+                                                         AnimalData(descriptionName: "Ragdoll"),
+                                                         AnimalData(descriptionName: "Ashera"),
+                                                         AnimalData(descriptionName: "American Shorthair"),
+                                                         AnimalData(descriptionName: "Exótico"),
+                                                         AnimalData(descriptionName: "SRD - Sem Raça Definida"),
+                                                         IMCData()
+                                            ].shuffled()
     
     
     var count: Int {
