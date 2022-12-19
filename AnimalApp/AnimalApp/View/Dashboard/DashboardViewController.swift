@@ -33,8 +33,6 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.alert = Alert(controller: self)
-        
-        dashboardViewModel.getData()
     }
     
 }
