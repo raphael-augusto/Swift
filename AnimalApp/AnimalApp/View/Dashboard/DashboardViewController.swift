@@ -52,21 +52,21 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DashboardViewCell.identifier, for: indexPath) as? DashboardViewCell else { return UITableViewCell() }
     
-        cell.setupCell(cell: self.dashboardViewModel.getNames(indexPath: indexPath))
+        cell.setupCell(cell: self.dashboardViewModel.getNames(indexPath: indexPath).descriptionName ?? "")
 
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let dataIndexPath = self.dashboardViewModel.getNames(indexPath: indexPath)        
+        guard let dataIndexPath = self.dashboardViewModel.getNames(indexPath: indexPath).descriptionName else { return }
         
-        if dataIndexPath.description == IMCData().descriptionName {
+        if dataIndexPath == IMCData().descriptionName {
             let homeIMC = HomeIMCViewController()
             self.navigationController?.pushViewController(homeIMC, animated: true)
 
         }else {
-            self.alert?.getAlert(title: "Atenção", message: "Nome da raça selecionada é: \(dataIndexPath.description)")
+            self.alert?.getAlert(title: "Atenção", message: "Nome da raça selecionada é: \(dataIndexPath)")
         }
     }
     

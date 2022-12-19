@@ -15,7 +15,7 @@ protocol DescriptionProtocol {
 
 class DashboardViewModel {
 
-    private(set) var dataValue: [String] = []
+    private(set) var dataValue: [DescriptionProtocol] = []
     
 
     public func getData () {
@@ -34,7 +34,7 @@ class DashboardViewModel {
 
         
         for name in names {
-            self.dataValue.append((name as! any DescriptionProtocol).descriptionName ?? "")
+            self.dataValue.append(name as! any DescriptionProtocol)
         }
     }
     
@@ -44,7 +44,7 @@ class DashboardViewModel {
     }
     
     
-    func getNames(indexPath: IndexPath) -> String {
+    func getNames(indexPath: IndexPath) -> DescriptionProtocol {
         return dataValue[indexPath.row]
     }
 }
