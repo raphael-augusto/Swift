@@ -8,30 +8,43 @@
 import Foundation
 
 
+protocol DescriptionProtocol {
+    var descriptionName: String? { get }
+}
+
+
 class DashboardViewModel {
 
+    private(set) var dataValue: [String] = []
     
-    private(set) var dataAnimal = AnimalRaceModel(animal: [])
 
-    
-    public func getAnimalData () {
-        let names = ["Persa", "Siamês", "Maine Coon", "Angorá", "Sphynx",
-                     "Ragdoll","Ashera","American Shorthair", "Exótico","SRD - Sem Raça Definida", "Indice de Massa Corporal"].shuffled()
-        let data = names
+    public func getData () {
+        let names = [AnimalData(descriptionName: "Persa"),
+                     AnimalData(descriptionName: "Siamês"),
+                     AnimalData(descriptionName: "Maine Coon"),
+                     AnimalData(descriptionName: "Angorá"),
+                     AnimalData(descriptionName: "Sphynx"),
+                     AnimalData(descriptionName: "Ragdoll"),
+                     AnimalData(descriptionName: "Ashera"),
+                     AnimalData(descriptionName: "American Shorthair"),
+                     AnimalData(descriptionName: "Exótico"),
+                     AnimalData(descriptionName: "SRD - Sem Raça Definida"),
+                     IMCData()
+        ].shuffled()
+
         
-        for name in data {
-            dataAnimal.animal.append(AnimalData(name: name))
+        for name in names {
+            self.dataValue.append((name as! any DescriptionProtocol).descriptionName ?? "")
         }
     }
     
     
     var count: Int {
-        return dataAnimal.animal.count
+        return dataValue.count
     }
     
     
-    func getAnimal(indexPath: IndexPath) -> AnimalData {
-        return dataAnimal.animal[indexPath.row]
+    func getNames(indexPath: IndexPath) -> String {
+        return dataValue[indexPath.row]
     }
-    
 }

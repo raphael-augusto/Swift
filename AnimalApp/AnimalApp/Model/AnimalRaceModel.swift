@@ -8,10 +8,6 @@
 import Foundation
 
 
-struct AnimalRaceModel {
-    var animal: [AnimalData]
-}
-
-struct AnimalData {
-    var name: String?
+struct AnimalData: DescriptionProtocol {
+    var descriptionName: String?
 }
