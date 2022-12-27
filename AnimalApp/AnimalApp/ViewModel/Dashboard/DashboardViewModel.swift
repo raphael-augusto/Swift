@@ -25,7 +25,8 @@ class DashboardViewModel {
                                                          AnimalData(descriptionName: "American Shorthair"),
                                                          AnimalData(descriptionName: "Exótico"),
                                                          AnimalData(descriptionName: "SRD - Sem Raça Definida"),
-                                                         IMCData()
+                                                         IMCData(),
+                                                         CarModel()
                                             ].shuffled()
     
     

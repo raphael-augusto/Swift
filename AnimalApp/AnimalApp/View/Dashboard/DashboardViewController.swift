@@ -50,7 +50,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DashboardViewCell.identifier, for: indexPath) as? DashboardViewCell else { return UITableViewCell() }
     
-        cell.setupCell(cell: self.dashboardViewModel.getNames(indexPath: indexPath).descriptionName ?? "")
+        cell.setupCell(cell: self.dashboardViewModel.getNames(indexPath: indexPath).descriptionName.orEmpty)
 
         return cell
     }
@@ -63,7 +63,11 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             let homeIMC = HomeIMCViewController()
             self.navigationController?.pushViewController(homeIMC, animated: true)
 
-        }else {
+        } else if dataIndexPath == CarModel().descriptionName {
+            let car = CarViewController()
+            self.navigationController?.pushViewController(car, animated: true)
+
+        } else {
             self.alert?.getAlert(title: "Atenção", message: "Nome da raça selecionada é: \(dataIndexPath)")
         }
     }
